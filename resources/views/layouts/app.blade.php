@@ -31,34 +31,34 @@ Irumbuliyur,East Tamabaram Chennai -59. " />
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- BOOTSTRAP STYLE SHEET -->
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="{!! asset('assets/css/bootstrap.min.css') !!}">
     <!-- FONTAWESOME STYLE SHEET -->
-    <link rel="stylesheet" type="text/css" href="css/fontawesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="{!! asset('assets/css/fontawesome/css/font-awesome.min.css') !!}" />
     <!-- FLATICON STYLE SHEET -->
-    <link rel="stylesheet" type="text/css" href="css/flaticon.min.css">
+    <link rel="stylesheet" type="text/css" href="{!! asset('assets/css/flaticon.min.css') !!}">
     <!-- ANIMATE STYLE SHEET --> 
-    <link rel="stylesheet" type="text/css" href="css/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="{!! asset('assets/css/animate.min.css') !!}">
     <!-- OWL CAROUSEL STYLE SHEET -->
-	<link rel="stylesheet" type="text/css" href="css/owl.carousel.min.css">
+	<link rel="stylesheet" type="text/css" href="{!! asset('assets/css/owl.carousel.min.css') !!}">
     <!-- BOOTSTRAP SELECT BOX STYLE SHEET -->
-    <link rel="stylesheet" type="text/css" href="css/bootstrap-select.min.css">
+    <link rel="stylesheet" type="text/css" href="{!! asset('assets/css/bootstrap-select.min.css') !!}">
     <!-- MAGNIFIC POPUP STYLE SHEET -->
-    <link rel="stylesheet" type="text/css" href="css/magnific-popup.min.css">
+    <link rel="stylesheet" type="text/css" href="{!! asset('assets/css/magnific-popup.min.css') !!}">
     <!-- LOADER STYLE SHEET -->
-    <link rel="stylesheet" type="text/css" href="css/loader.min.css">    
+    <link rel="stylesheet" type="text/css" href="{!! asset('assets/css/loader.min.css') !!}">    
     <!-- MAIN STYLE SHEET -->
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="{!! asset('assets/css/style.css') !!}">
     <!-- THEME COLOR CHANGE STYLE SHEET -->
-    <link rel="stylesheet" class="skin" type="text/css" href="css/skin/skin-1.css">
+    <link rel="stylesheet" class="skin" type="text/css" href="{!! asset('assets/css/skin/skin-1.css') !!}">
     <!-- CUSTOM  STYLE SHEET -->
-    <link rel="stylesheet" type="text/css" href="css/custom.css">
+    <link rel="stylesheet" type="text/css" href="{!! asset('assets/css/custom.css') !!}">
     <!-- SIDE SWITCHER STYLE SHEET -->
-    <link rel="stylesheet" type="text/css" href="css/switcher.css">    
+    <link rel="stylesheet" type="text/css" href="{!! asset('assets/css/switcher.css') !!}">    
     
     <!-- REVOLUTION SLIDER CSS -->
-    <link rel="stylesheet" type="text/css" href="plugins/revolution/revolution/css/settings.css">
+    <link rel="stylesheet" type="text/css" href="{!! asset('assets/plugins/revolution/revolution/css/settings.css') !!}">
     <!-- REVOLUTION NAVIGATION STYLE -->
-    <link rel="stylesheet" type="text/css" href="plugins/revolution/revolution/css/navigation.css">
+    <link rel="stylesheet" type="text/css" href="{!! asset('assets/plugins/revolution/revolution/css/navigation.css') !!}">
     
     <!-- GOOGLE FONTS -->
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,300italic,400italic,500,500italic,700,700italic,900italic,900' rel='stylesheet' type='text/css'>
@@ -79,35 +79,35 @@ Irumbuliyur,East Tamabaram Chennai -59. " />
 @yield('third_party_scripts')
 <!-- LOADING AREA  END ====== -->
 <!-- JAVASCRIPT  FILES ========================================= --> 
-<script type="text/javascript"  src="js/jquery-1.12.4.min.js"></script><!-- JQUERY.MIN JS -->
-<script type="text/javascript"  src="js/bootstrap.min.js"></script><!-- BOOTSTRAP.MIN JS -->
-<script type="text/javascript"  src="js/bootstrap-select.min.js"></script><!-- FORM JS -->
-<script type="text/javascript"  src="js/jquery.bootstrap-touchspin.min.js"></script><!-- FORM JS -->
-<script type="text/javascript"  src="js/magnific-popup.min.js"></script><!-- MAGNIFIC-POPUP JS -->
-<script type="text/javascript"  src="js/waypoints.min.js"></script><!-- WAYPOINTS JS -->
-<script type="text/javascript"  src="js/counterup.min.js"></script><!-- COUNTERUP JS -->
-<script type="text/javascript"  src="js/waypoints-sticky.min.js"></script><!-- COUNTERUP JS -->
-<script type="text/javascript" src="js/isotope.pkgd.min.js"></script><!-- MASONRY  -->
-<script type="text/javascript"  src="js/owl.carousel.min.js"></script><!-- OWL  SLIDER  -->
-<script type="text/javascript"  src="js/stellar.min.js"></script><!-- PARALLAX BG IMAGE   --> 
-<script type="text/javascript"  src="js/scrolla.min.js"></script><!-- ON SCROLL CONTENT ANIMTE   -->
-<script type="text/javascript"  src="js/custom.js"></script><!-- CUSTOM FUCTIONS  -->
-<script type="text/javascript"  src="js/shortcode.js"></script><!-- SHORTCODE FUCTIONS  -->
-<script type="text/javascript"  src="js/switcher.js"></script><!-- SWITCHER FUCTIONS  -->
+<script type="text/javascript"  src="{!! asset('assets/js/jquery-1.12.4.min.js') !!}"></script><!-- JQUERY.MIN JS -->
+<script type="text/javascript"  src="{!! asset('assets/js/bootstrap.min.js') !!}"></script><!-- BOOTSTRAP.MIN JS -->
+<script type="text/javascript"  src="{!! asset('assets/js/bootstrap-select.min.js') !!}"></script><!-- FORM JS -->
+<script type="text/javascript"  src="{!! asset('assets/js/jquery.bootstrap-touchspin.min.js') !!}"></script><!-- FORM JS -->
+<script type="text/javascript"  src="{!! asset('assets/js/magnific-popup.min.js') !!}"></script><!-- MAGNIFIC-POPUP JS -->
+<script type="text/javascript"  src="{!! asset('assets/js/waypoints.min.js') !!}"></script><!-- WAYPOINTS JS -->
+<script type="text/javascript"  src="{!! asset('assets/js/counterup.min.js') !!}"></script><!-- COUNTERUP JS -->
+<script type="text/javascript"  src="{!! asset('assets/js/waypoints-sticky.min.js') !!}"></script><!-- COUNTERUP JS -->
+<script type="text/javascript" src="{!! asset('assets/js/isotope.pkgd.min.js') !!}"></script><!-- MASONRY  -->
+<script type="text/javascript"  src="{!! asset('assets/js/owl.carousel.min.js') !!}"></script><!-- OWL  SLIDER  -->
+<script type="text/javascript"  src="{!! asset('assets/js/stellar.min.js') !!}"></script><!-- PARALLAX BG IMAGE   --> 
+<script type="text/javascript"  src="{!! asset('assets/js/scrolla.min.js') !!}"></script><!-- ON SCROLL CONTENT ANIMTE   -->
+<script type="text/javascript"  src="{!! asset('assets/js/custom.js') !!}"></script><!-- CUSTOM FUCTIONS  -->
+<script type="text/javascript"  src="{!! asset('assets/js/shortcode.js') !!}"></script><!-- SHORTCODE FUCTIONS  -->
+<script type="text/javascript"  src="{!! asset('assets/js/switcher.js') !!}"></script><!-- SWITCHER FUCTIONS  -->
  
 <!-- REVOLUTION JS FILES -->
-<script type="text/javascript" src="plugins/revolution/revolution/js/jquery.themepunch.tools.min.js"></script>
-<script type="text/javascript" src="plugins/revolution/revolution/js/jquery.themepunch.revolution.min.js"></script>
+<script type="text/javascript" src="{!! asset('assets/plugins/revolution/revolution/js/jquery.themepunch.tools.min.js') !!}"></script>
+<script type="text/javascript" src="{!! asset('assets/plugins/revolution/revolution/js/jquery.themepunch.revolution.min.js') !!}"></script>
 <!-- SLIDER REVOLUTION 5.0 EXTENSIONS  (Load Extensions only on Local File Systems !  The following part can be removed on Server for On Demand Loading) -->	
-<script type="text/javascript" src="plugins/revolution/revolution/js/extensions/revolution.extension.actions.min.js"></script>
-<script type="text/javascript" src="plugins/revolution/revolution/js/extensions/revolution.extension.carousel.min.js"></script>
-<script type="text/javascript" src="plugins/revolution/revolution/js/extensions/revolution.extension.kenburn.min.js"></script>
-<script type="text/javascript" src="plugins/revolution/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
-<script type="text/javascript" src="plugins/revolution/revolution/js/extensions/revolution.extension.migration.min.js"></script>
-<script type="text/javascript" src="plugins/revolution/revolution/js/extensions/revolution.extension.navigation.min.js"></script>
-<script type="text/javascript" src="plugins/revolution/revolution/js/extensions/revolution.extension.parallax.min.js"></script>
-<script type="text/javascript" src="plugins/revolution/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
-<script type="text/javascript" src="plugins/revolution/revolution/js/extensions/revolution.extension.video.min.js"></script>
+<script type="text/javascript" src="{!! asset('assets/plugins/revolution/revolution/js/extensions/revolution.extension.actions.min.js') !!}"></script>
+<script type="text/javascript" src="{!! asset('assets/plugins/revolution/revolution/js/extensions/revolution.extension.carousel.min.js') !!}"></script>
+<script type="text/javascript" src="{!! asset('assets/plugins/revolution/revolution/js/extensions/revolution.extension.kenburn.min.js') !!}"></script>
+<script type="text/javascript" src="{!! asset('assets/plugins/revolution/revolution/js/extensions/revolution.extension.layeranimation.min.js') !!}"></script>
+<script type="text/javascript" src="{!! asset('assets/plugins/revolution/revolution/js/extensions/revolution.extension.migration.min.js') !!}"></script>
+<script type="text/javascript" src="{!! asset('assets/plugins/revolution/revolution/js/extensions/revolution.extension.navigation.min.js') !!}"></script>
+<script type="text/javascript" src="{!! asset('assets/plugins/revolution/revolution/js/extensions/revolution.extension.parallax.min.js') !!}"></script>
+<script type="text/javascript" src="{!! asset('assets/plugins/revolution/revolution/js/extensions/revolution.extension.slideanims.min.js') !!}"></script>
+<script type="text/javascript" src="{!! asset('assets/plugins/revolution/revolution/js/extensions/revolution.extension.video.min.js') !!}"></script>
 <!-- REVOLUTION SLIDER FUNCTION  ===== -->
 
 @stack('page_scripts')

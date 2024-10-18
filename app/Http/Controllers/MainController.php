@@ -82,9 +82,14 @@ class MainController extends BaseController
         }
    
 
-public function blog(){
-    
-    return view("blog");
+		public function blog(){
+			
+			return view("blog");
 
-}
+		}
+		public function admin(){
+			
+			return view("admin/login");
+
+		}
 }
