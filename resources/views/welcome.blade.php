@@ -652,17 +652,17 @@
             <div class="item">
                <div class="ow-event-post date-style-2">
                   <div class="ow-event-media wt-img-effect img-reflection">
-                     <img src="{{ URL::to('/') }}/upload/projectsave/{{ $pro->photo }}" alt="{{ $pro->photo }}">
+                     <img src="{{ URL::to('/') }}/upload/projectsave/{{ $pro->photo }}" alt="{{ $pro->project_name }}">
                   </div>
                   <div class="ow-event-info p-a30 bg-gray">
                      <div class="ow-event-title">
-                        <h4 class="event-title">{{ $pro->photo }}<a href="{{ url('project') }}/{{ $pro->photo }}" title="{{ $pro->photo }}"></a></h4>
+                        <h4 class="event-title">{{ $pro->project_name }}<a href="{{ url('project') }}/{{ $pro->id }}" title="{{ $pro->project_name }}"></a></h4>
                      </div>
                      <div class="ow-event-text">
-                        <p>{{ $pro->photo }}</p>
+                        <p>{{ $pro->project_name }}, {{ $pro->project_name }}{{ $pro->project_owner }},'{{ $pro->project_address }}</p>
                      </div>
                      <div class="ow-event-readmore "> 
-                        <a href="{{ url('project') }}/{{ $pro->photo }}" title="{{ $pro->photo }}" rel="bookmark" class=" site-button"> READ MORE</a> 
+                        <a href="{{ url('project') }}/{{ $pro->id }}" title="{{ $pro->project_name }}" rel="bookmark" class=" site-button"> READ MORE</a> 
                      </div>
                   </div>
                </div>
@@ -690,17 +690,17 @@
             <div class="item">
                <div class="ow-event-post date-style-2">
                   <div class="ow-event-media wt-img-effect img-reflection">
-                     <img src="{{ URL::to('/') }}/upload/projectsave/{{ $pro->photo }}" alt="{{ $pro->photo }}">
+                     <img src="{{ URL::to('/') }}/upload/projectsave/{{ $pro->photo }}" alt="{{ $pro->project_name }}">
                   </div>
                   <div class="ow-event-info p-a30 bg-gray">
                      <div class="ow-event-title">
-                        <h4 class="event-title">{{ $pro->photo }}<a href="{{ url('project') }}/{{ $pro->photo }}" title="{{ $pro->photo }}"></a></h4>
+                        <h4 class="event-title">{{ $pro->project_name }}<a href="{{ url('project') }}/{{ $pro->id }}" title="{{ $pro->project_name }}"></a></h4>
                      </div>
                      <div class="ow-event-text">
-                        <p>{{ $pro->photo }}</p>
+                        <p>{{ $pro->project_name }}, {{ $pro->project_name }}{{ $pro->project_owner }},'{{ $pro->project_address }}</p>
                      </div>
                      <div class="ow-event-readmore "> 
-                        <a href="{{ url('project') }}/{{ $pro->photo }}" title="{{ $pro->photo }}" rel="bookmark" class=" site-button"> READ MORE</a> 
+                        <a href="{{ url('project') }}/{{ $pro->photo }}" title="{{ $pro->project_name }}" rel="bookmark" class=" site-button"> READ MORE</a> 
                      </div>
                   </div>
                </div>
@@ -728,17 +728,17 @@
             <div class="item">
                <div class="ow-event-post date-style-2">
                   <div class="ow-event-media wt-img-effect img-reflection">
-                     <img src="{{ URL::to('/') }}/upload/projectsave/{{ $pro->photo }}" alt="{{ $pro->photo }}">
+                     <img src="{{ URL::to('/') }}/upload/projectsave/{{ $pro->photo }}" alt="{{ $pro->project_name }}">
                   </div>
                   <div class="ow-event-info p-a30 bg-gray">
                      <div class="ow-event-title">
-                        <h4 class="event-title">{{ $pro->photo }}<a href="{{ url('project') }}/{{ $pro->photo }}" title="{{ $pro->photo }}"></a></h4>
+                        <h4 class="event-title">{{ $pro->project_name }}<a href="{{ url('project') }}/{{ $pro->id }}" title="{{ $pro->project_name }}"></a></h4>
                      </div>
                      <div class="ow-event-text">
-                        <p>{{ $pro->photo }}</p>
+                        <p>{{ $pro->project_name }}, {{ $pro->project_name }}{{ $pro->project_owner }},'{{ $pro->project_address }}</p>
                      </div>
                      <div class="ow-event-readmore "> 
-                        <a href="{{ url('project') }}/{{ $pro->photo }}" title="{{ $pro->photo }}" rel="bookmark" class=" site-button"> READ MORE</a> 
+                        <a href="{{ url('project') }}/{{ $pro->id }}" title="{{ $pro->photo }}" rel="bookmark" class=" site-button"> READ MORE</a> 
                      </div>
                   </div>
                </div>
