@@ -28,7 +28,7 @@
                     	<!-- SITE LOGO -->
                         <div class="logo-header mostion header-skew">
                             <a href="{{ url('home') }}">
-                                <img src="images/about.png" width="200" height="67" alt="" />
+                                <img src="{{ URL::to('/') }}/assets/images/about.png" width="200" height="67" alt="" />
                             </a>
                         </div>
                         <!-- NAV TOGGLE BUTTON -->
@@ -60,16 +60,15 @@
                                 <li >
                                     <a href="{{ url('about_us') }}">About Us</a>
                                 </li>
-                                <li >
+                                <li>
                                     <a href="javascript:;">Projects<i class="fa fa-chevron-down"></i></a>
                                             <ul class="sub-menu">
-                                                <li><a href="{{ url('completed') }}">Completed Project</a></li>
-                                                <li><a href="{{ url('upcoming') }}">Upcoming Project</a></li> 
-                                                <li><a href="{{ url('progress') }}">Progress Project</a></li>
+                                                <li><a href="{{ url('projects') }}/3">Completed Project</a></li>
+                                                <li><a href="{{ url('projects') }}/1">Upcoming Project</a></li> 
+                                                <li><a href="{{ url('projects') }}/2">Progress Project</a></li>
                                             </ul>
                                         </li>
-                                
-                                <li >
+                                <li>
                                     <a href="{{ url('gallery') }}">Gallery</a>
                                 </li>                                <li >
                                     <a href="{{ url('testimonial') }}">Testimonial</a>

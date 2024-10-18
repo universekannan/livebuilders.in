@@ -48,17 +48,19 @@ class MainController extends BaseController
     }
 
         public function about_us(){
-			      $products = DB::table( 'products' )->orderBy( 'id', 'Asc' )->paginate(4);
+			
 
             return view("about");
 
         }
 
 
-        public function projects(){
+        public function projects($id){
 			
-            return view("projects");
+		   $products = DB::table( 'project' )->where( 'project_status_id', $id )->orderBy( 'id', 'Asc' )->paginate(16);
+          $projecttype = DB::table( 'project_status' )->where( 'id', $id )->first();
 
+        return view( 'projects', compact( 'products','projecttype' ) );
         }
 
         public function testimonial(){

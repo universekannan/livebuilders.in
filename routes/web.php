@@ -12,6 +12,7 @@ Route::get('testimonial', [App\Http\Controllers\MainController::class, 'testimon
 Route::get('contactus', [App\Http\Controllers\MainController::class, 'contactus'])->name('contactus');
 
 Route::get('project/{id}', [App\Http\Controllers\MainController::class, 'project'])->name('project');
+Route::get('projects/{id}', [App\Http\Controllers\MainController::class, 'projects'])->name('projects');
 Route::get('admin', [App\Http\Controllers\MainController::class, 'admin'])->name('admin');
 
 Route::get('slider', [App\Http\Controllers\MainController::class, 'slider'])->name('slider');
