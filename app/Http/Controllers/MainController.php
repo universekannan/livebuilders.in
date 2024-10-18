@@ -41,7 +41,11 @@ class MainController extends BaseController
            $Completedprojects = DB::table( 'project' )->where( 'project_status_id', '3' )->orderBy( 'id', 'Asc' )->limit(6)->get();
           return view( 'welcome', compact( 'Upcomingprojects','Progressprojects','Completedprojects' ) );
         }
+    public function project($id) {
+      $project = DB::table( 'project' )->where( 'id', $id )->first();
 
+        return view( 'project', compact( 'project' ) );
+    }
 
         public function about_us(){
 			      $products = DB::table( 'products' )->orderBy( 'id', 'Asc' )->paginate(4);
