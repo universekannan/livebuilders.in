@@ -1,5 +1,5 @@
 @extends('admin.layouts.app')
-@section('admin.content')
+@section('content')
 <section class="content-header">
    <div class="container-fluid">
       <div class="row mb-2">
@@ -7,9 +7,9 @@
             <h1>Backup Database</h1>
          </div>
          <div class="col-sm-6">
-            @if((Auth::user()->usertype_id == '1') || (Auth::user()->user_type_id == '2') || (Auth::user()->user_type_id == '3'))  
-            <ol class="breadcrumb float-sm-right">
-               <form action="{{ url('backup/create') }}" method="GET" enctype="multipart/form-data" id="CreateBackupForm">
+          @if((Auth::user()->usertype_id == '1') || (Auth::user()->user_type_id == '2') || (Auth::user()->user_type_id == '3')) 
+             <ol class="breadcrumb float-sm-right">
+               <form action="{{ url('admin/backup/create') }}" method="GET" enctype="multipart/form-data" id="CreateBackupForm">
                   {{ csrf_field() }}
                   <input type="submit" name="submit" class="btn btn-secondary btn-sm float-right"  value="Create Database Backup">
                </form>
@@ -58,7 +58,7 @@
                         @foreach($backups as $backup)
                         <tr>
                            <td>{{ $backup['file_name'] }}</td>
-                           <td>{{ \App\Http\Controllers\BackupController::humanFilesize($backup['file_size']) }}</td>
+                           <td>{{ \App\Http\Controllers\Admin\BackupController::humanFilesize($backup['file_size']) }}</td>
                            <td>
                               {{ date('F jS, Y, g:ia (T)',$backup['last_modified']) }}
                            </td>
@@ -67,10 +67,10 @@
                            </td>
                            <td>
                               <a class="btn btn-success"
-                                 href="{{ url('backup/download/'.substr($backup['file_name'],11)) }}"><i
+                                 href="{{ url('admin/backup/download/'.substr($backup['file_name'],11)) }}"><i
                                  class="fa fa-cloud-download"></i> Download</a>
                               <a class="btn btn-danger" onclick="return confirm('Do you really want to delete this file')" data-button-type="delete"
-                                 href="{{ url('/backup/delete/'. substr($backup['file_name'],11)) }}"><i class="fa fa-trash-o"></i>
+                                 href="{{ url('admin/backup/delete/'. substr($backup['file_name'],11)) }}"><i class="fa fa-trash-o"></i>
                               Delete</a>
                            </td>
                         </tr>
