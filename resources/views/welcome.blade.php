@@ -652,7 +652,7 @@
             <div class="item">
                <div class="ow-event-post date-style-2">
                   <div class="ow-event-media wt-img-effect img-reflection">
-                     <img src="{{ URL::to('/') }}/upload/projects/{{ $pro->photo }}" alt="{{ $pro->photo }}">
+                     <img src="{{ URL::to('/') }}/upload/projectsave/{{ $pro->photo }}" alt="{{ $pro->photo }}">
                   </div>
                   <div class="ow-event-info p-a30 bg-gray">
                      <div class="ow-event-title">
@@ -690,7 +690,7 @@
             <div class="item">
                <div class="ow-event-post date-style-2">
                   <div class="ow-event-media wt-img-effect img-reflection">
-                     <img src="{{ URL::to('/') }}/upload/projects/{{ $pro->photo }}" alt="{{ $pro->photo }}">
+                     <img src="{{ URL::to('/') }}/upload/projectsave/{{ $pro->photo }}" alt="{{ $pro->photo }}">
                   </div>
                   <div class="ow-event-info p-a30 bg-gray">
                      <div class="ow-event-title">
@@ -728,7 +728,7 @@
             <div class="item">
                <div class="ow-event-post date-style-2">
                   <div class="ow-event-media wt-img-effect img-reflection">
-                     <img src="{{ URL::to('/') }}/upload/projects/{{ $pro->photo }}" alt="{{ $pro->photo }}">
+                     <img src="{{ URL::to('/') }}/upload/projectsave/{{ $pro->photo }}" alt="{{ $pro->photo }}">
                   </div>
                   <div class="ow-event-info p-a30 bg-gray">
                      <div class="ow-event-title">
