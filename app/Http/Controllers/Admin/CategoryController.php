@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
-use Hash;
+use Hash; 
 
 
 class CategoryController extends Controller
@@ -18,7 +18,7 @@ class CategoryController extends Controller
 
    public function updatecategory(Request $request)
     {
-        $editcategory = DB::table('categorys')->where('id', $request->cat_id)->update([
+        $editcategory = DB::table('category')->where('id', $request->cat_id)->update([
             'category_name' => $request->category_name,
             'updated_at'    => date('Y-m-d H:i:s'),
             'status'        => $request->status,
@@ -29,7 +29,7 @@ class CategoryController extends Controller
          $qrcode = $catid.'.'.$request->file('photo')->extension();
          $filepath = public_path('upload'.DIRECTORY_SEPARATOR.'catimage'.DIRECTORY_SEPARATOR);
          move_uploaded_file($_FILES['photo']['tmp_name'], $filepath.$qrcode);
-         $sql = "update categorys set photo='$qrcode' where id = $catid";
+         $sql = "update category set photo='$qrcode' where id = $catid";
            DB::update(DB::raw($sql));
        }
         return redirect()->back()->with( 'success', 'Category Updated Successfully ... !' );
@@ -37,9 +37,9 @@ class CategoryController extends Controller
 
     public function manageSubcategory($id)
     {
-        $sql = "select * from categorys where parent_id=$id order by id";
+        $sql = "select * from category where parent_id=$id order by id";
         $subcat = DB::select(DB::raw($sql));
-        $sql = "select * from categorys where id=$id";
+        $sql = "select * from category where id=$id";
         $cat = DB::select(DB::raw($sql));
         $cat_name = "";
         $cat_id = 0;
@@ -58,7 +58,7 @@ class CategoryController extends Controller
         $output = preg_replace( '!\s+!', ' ', $category_names );
         $category_url =  strtolower( str_replace( ' ', '_', $output ) );
 		
-        $addsubcategory = DB::table('categorys')->insert([
+        $addsubcategory = DB::table('category')->insert([
             'parent_id'        => $request->category_id,
             'category_name'    => $request->subcategory_name,
             'category_url'    => $category_url,
@@ -72,7 +72,7 @@ class CategoryController extends Controller
          $qrcode = $last_insert_id.'.'.$request->file('photo')->extension();
          $filepath = public_path('upload'.DIRECTORY_SEPARATOR.'catimage'.DIRECTORY_SEPARATOR);
          move_uploaded_file($_FILES['photo']['tmp_name'], $filepath.$qrcode);
-         $sql = "update categorys set photo='$qrcode' where id = $last_insert_id";
+         $sql = "update category set photo='$qrcode' where id = $last_insert_id";
            DB::update(DB::raw($sql));
        }
 
@@ -99,7 +99,7 @@ class CategoryController extends Controller
 
     public function catattribute()
     {
-        $sql = "select * from categorys where parent_id=0 and status=1 order by id";
+        $sql = "select * from category where parent_id=0 and status=1 order by id";
         $category = DB::select(DB::raw($sql));
         $sql = "select * from attribute order by attr_name";
         $attributes = DB::select(DB::raw($sql));
@@ -159,9 +159,9 @@ class CategoryController extends Controller
         return view("admin/category/attribute", compact('attributes'));
     }
 
-    public function categorys()
+    public function category()
     {
-        $sql = "select * from categorys where parent_id=0 and status=1 order by id";
+        $sql = "select * from category where status=1 order by id";
         $category = DB::select(DB::raw($sql));
         return view("admin/category/index", compact('category'));
     }
@@ -174,7 +174,7 @@ class CategoryController extends Controller
         $output = preg_replace( '!\s+!', ' ', $category_names );
         $category_url =  strtolower( str_replace( ' ', '_', $output ) );
 
-        $addcategory = DB::table('categorys')->insert([
+        $addcategory = DB::table('category')->insert([
             'parent_id' => 0,
             'category_name' => $request->category_name,
             'category_url' => $category_url,
@@ -191,7 +191,7 @@ class CategoryController extends Controller
             move_uploaded_file( $_FILES[ 'photo' ][ 'tmp_name' ], $filepath . $profile_photo );
         }
 
-        $addimg = DB::table( 'categorys' )->where( 'id', $last_insert_id )->update( [
+        $addimg = DB::table( 'category' )->where( 'id', $last_insert_id )->update( [
             'photo' => $profile_photo,
         ] );
         return redirect()->back()->with( 'success', 'Add Category Successfully ... !' );
@@ -235,9 +235,9 @@ class CategoryController extends Controller
 
     public function deletesubcategory($id)
     {
-        $sql = "delete from categorys where id=$id";
+        $sql = "delete from category where id=$id";
         DB::delete(DB::raw($sql));
-        return redirect('admin/categorys')->with('success', 'Category Deleted Successfully');
+        return redirect('admin/category')->with('success', 'Category Deleted Successfully');
     }
 
 
@@ -245,7 +245,7 @@ class CategoryController extends Controller
     public function editsubcategory(Request $request)
     {
 
-        $editsubcategory = DB::table('categorys')->where('id', $request->row_id)->update([
+        $editsubcategory = DB::table('category')->where('id', $request->row_id)->update([
             'category_name' => $request->subcategory_name,
             'updated_at'       => date('Y-m-d H:i:s'),
             'status'           => $request->status,
@@ -255,9 +255,9 @@ class CategoryController extends Controller
          $qrcode = $editsubcategory.'.'.$request->file('photo')->extension();
          $filepath = public_path('upload'.DIRECTORY_SEPARATOR.'catimage'.DIRECTORY_SEPARATOR);
          move_uploaded_file($_FILES['photo']['tmp_name'], $filepath.$qrcode);
-         $sql = "update categorys set photo='$qrcode' where id = $row_id";
+         $sql = "update category set photo='$qrcode' where id = $row_id";
            DB::update(DB::raw($sql));
-           $addimg = DB::table( 'categorys' )->where( 'id', $request->row_id )->update( [
+           $addimg = DB::table( 'category' )->where( 'id', $request->row_id )->update( [
             'photo' => $qrcode,
         ] );
         dd($request->all());
@@ -268,12 +268,12 @@ class CategoryController extends Controller
     public function DeleteSubcat($id)
     {
 
-        $cat = DB::table('categorys')->where('id', $id)->get();
+        $cat = DB::table('category')->where('id', $id)->get();
         $parent_id = 0;
         if (count($cat) > 0) {
             $parent_id = $cat[0]->parent_id;
         }
-        $deletesubcat = DB::table('categorys')->where('id', $id)->delete();
+        $deletesubcat = DB::table('category')->where('id', $id)->delete();
 
         return redirect("admin/subcategory/". $parent_id)->with('success', 'Subcategory Deleted Successfully');
     }

@@ -81,13 +81,13 @@
                            
                         </div>
 
-                              <div class="form-group ">
+                                <div class="form-group ">
                                     <label for="photo" class="col-sm-2 col-form-label"><span
                                         style="color:red">*</span>Project Image</label>
                                         
                                             <input type="file"  class="form-control" name="photo" maxlength="100" type="photo">
                                     
-                                </div>
+                                 </div>
                                         <div class="form-group ">
                                             <label for="project_address"  class="col-sm-2 col-form-label">Project address<span style="color:red">*</span></label>
                                               <textarea required="required" class="form-control"

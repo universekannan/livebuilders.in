@@ -35,7 +35,7 @@
                                         <td>{{ $cate->id }}</td>
                                         <td>{{ $cate->category_name }}</td>
                                         <td><img src="../upload/catimage/{{ $cate->photo }}"
-                                            width="50"
+                                            width="100"
                                             height="50"></td>
                                         @if ($cate->status == 1)
                                             <td>Active</td>
@@ -48,10 +48,7 @@
                                                 href="#" class="btn btn-sm btn-primary"><i
                                                     class="fa fa-edit"></i>Edit</a>
 
-                                            <a href="{{ url('/admin/subcategory', $cate->id) }}"
-                                                class="btn btn-warning btn-sm"><i class="fas fa-arrow-circle-right"></i> Sub
-                                                Category</a>
-
+                                           
                                     </tr>
                                 @endforeach
                             </tbody>

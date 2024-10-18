@@ -7,7 +7,7 @@
             <h1>Backup Database</h1>
          </div>
          <div class="col-sm-6">
-            @if((Auth::user()->user_type_id == 2) || (Auth::user()->user_type_id == 1) )
+            @if((Auth::user()->usertype_id == '1') || (Auth::user()->user_type_id == '2') || (Auth::user()->user_type_id == '3'))  
             <ol class="breadcrumb float-sm-right">
                <form action="{{ url('backup/create') }}" method="GET" enctype="multipart/form-data" id="CreateBackupForm">
                   {{ csrf_field() }}

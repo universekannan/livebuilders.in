@@ -10099,7 +10099,7 @@ ol.commentlist li::after {
 	5. services
 -------------------------------------*/
 .bg-service-team {
-	background-image: url(../images/our-services/crane-left.jpg);
+	background-image: url(../images/our-services/crane-left.html);
 	background-repeat: no-repeat;
 	background-position: -200px bottom;
 }

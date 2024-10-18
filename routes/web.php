@@ -16,16 +16,12 @@ Route::get('faq', 'App\Http\Controllers\MainController@faq');
 Route::get('blog', 'App\Http\Controllers\MainController@blog');
 
 
+Route::get('product/{product_url}', [App\Http\Controllers\MainController::class, 'product'])->name('product');
+Route::get('admin', [App\Http\Controllers\MainController::class, 'admin'])->name('admin');
 
-
-Route::get('admin', [App\Http\Controllers\FrondendController::class, 'admin'])->name('admin');
-
-Route::get('slider', [App\Http\Controllers\FrondendController::class, 'slider'])->name('slider');
-Route::get('admin/category/{id}', [App\Http\Controllers\FrondendController::class, 'categoryproducts'])->name('categoryproduct');
-Route::post('saveorder', [App\Http\Controllers\FrondendController::class, 'saveorder'])->name('saveorder');
-
-
-
+Route::get('slider', [App\Http\Controllers\MainController::class, 'slider'])->name('slider');
+Route::get('admin/category/{id}', [App\Http\Controllers\MainController::class, 'categoryproducts'])->name('categoryproduct');
+Route::post('saveorder', [App\Http\Controllers\MainController::class, 'saveorder'])->name('saveorder');
 
 
 //admin
@@ -54,23 +50,12 @@ ROUTE::get('deleteimage/{id}', [App\Http\Controllers\Admin\ProductsController::c
 ROUTE::post('addcategory', [App\Http\Controllers\Admin\CategoryController::class, 'AddCategory'])->name('addcategory');
 ROUTE::post('editcategory', [App\Http\Controllers\Admin\CategoryController::class, 'EditCategory'])->name('editcategory');
 ROUTE::post('updatecategory', [App\Http\Controllers\Admin\CategoryController::class, 'updatecategory'])->name('updatecategory');
-ROUTE::get('/admin/subcategory/{id}', [App\Http\Controllers\Admin\CategoryController::class, 'manageSubcategory'])->name('subcategory');
-ROUTE::post('addsubcategory', [App\Http\Controllers\Admin\CategoryController::class, 'AddSubCategory'])->name('addsubcategory');
 
 
-Route::Post('getattributes', [App\Http\Controllers\Admin\CategoryController::class, 'getattributes'])->name('getattributes');
-ROUTE::post('getsubcategory', [App\Http\Controllers\Admin\CategoryController::class, 'getsubcategory'])->name('getsubcategory');
-Route::get('admin/categorys', [App\Http\Controllers\Admin\CategoryController::class, 'categorys'])->name('categorys');
-Route::get('admin/attribute', [App\Http\Controllers\Admin\CategoryController::class, 'attribute'])->name('attribute');
-ROUTE::post('admin/addattribute', [App\Http\Controllers\Admin\CategoryController::class, 'addattribute'])->name('addattribute');
-ROUTE::get('admin/deleteattribute/{id}', [App\Http\Controllers\Admin\CategoryController::class, 'deleteattribute'])->name('deleteattribute');
-ROUTE::post('/linkattribute', [App\Http\Controllers\Admin\CategoryController::class, 'linkattribute'])->name('linkattribute');
-Route::get('admin/catattribute', [App\Http\Controllers\Admin\CategoryController::class, 'catattribute'])->name('catattribute');
-Route::get('admin/catattribute', [App\Http\Controllers\Admin\CategoryController::class, 'catattribute'])->name('catattribute');
-Route::get('/deleteattributelink/{id}', [App\Http\Controllers\Admin\CategoryController::class, 'deleteattributelink'])->name('deleteattributelink');
-ROUTE::post('/editsubcategory', [App\Http\Controllers\Admin\CategoryController::class, 'EditSubCategory'])->name('editsubcategory');
-Route::get('/deletesubcategory/{id}', [App\Http\Controllers\Admin\CategoryController::class, 'DeleteSubcat'])->name('deletesubcategory');
 
+Route::get('admin/category', [App\Http\Controllers\Admin\CategoryController::class, 'category'])->name('category');
+
+ROUTE::get('/dashboard', [App\Http\Controllers\Admin\BackupController::class, 'index'])->name('dashboard');
 
 
 ROUTE::get('/admin/backup', [App\Http\Controllers\Admin\BackupController::class, 'index'])->name('backup');
