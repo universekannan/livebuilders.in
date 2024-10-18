@@ -27,7 +27,7 @@
                     <div class="container">
                     	<!-- SITE LOGO -->
                         <div class="logo-header mostion header-skew">
-                            <a href="index.php">
+                            <a href="{{ url('home') }}">
                                 <img src="images/about.png" width="200" height="67" alt="" />
                             </a>
                         </div>
@@ -55,28 +55,28 @@
                         <div class="header-nav navbar-collapse collapse ">
                             <ul class=" nav navbar-nav">
                                 <li class='active'>
-                                    <a href="index.php">Home</a>
+                                    <a href="{{ url('home') }}">Home</a>
                                 </li>
                                 <li >
-                                    <a href="about-us.php">About Us</a>
+                                    <a href="{{ url('about_us') }}">About Us</a>
                                 </li>
                                 <li >
                                     <a href="javascript:;">Projects<i class="fa fa-chevron-down"></i></a>
                                             <ul class="sub-menu">
-                                                <li>< <a href="completed.php">Completed Project</a></li>
-                                                <!-- <li><a href="upcoming.php">Upcoming Project</a></li> -->
-                                                <li><a href="progress.php">Progress Project</a></li>
+                                                <li><a href="{{ url('completed') }}">Completed Project</a></li>
+                                                <li><a href="{{ url('upcoming') }}">Upcoming Project</a></li> 
+                                                <li><a href="{{ url('progress') }}">Progress Project</a></li>
                                             </ul>
                                         </li>
                                 
                                 <li >
-                                    <a href="gallery.php">Gallery</a>
+                                    <a href="{{ url('gallery') }}">Gallery</a>
                                 </li>                                <li >
-                                    <a href="testimonial.php">Testimonial</a>
+                                    <a href="{{ url('testimonial') }}">Testimonial</a>
                                 </li>
                             
                                 <li >
-                                    <a href="contact-us.php">Contact Us</a>
+                                    <a href="{{ url('contactus') }}">Contact Us</a>
                                 </li>
                             </ul>
                         </div>

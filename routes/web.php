@@ -3,18 +3,13 @@ use Illuminate\Support\Facades\Route;
 
 
 Auth::routes();
-
-Route::get('', 'App\Http\Controllers\MainController@welcome');
-Route::get('home', 'App\Http\Controllers\MainController@home');
-Route::get('about', 'App\Http\Controllers\MainController@about');
-Route::get('projects', 'App\Http\Controllers\MainController@projects');
-Route::get('testimonial', 'App\Http\Controllers\MainController@testimonial');
-Route::get('gallery', 'App\Http\Controllers\MainController@gallery');
-Route::get('the_team', 'App\Http\Controllers\MainController@the_team');
-Route::get('contact', 'App\Http\Controllers\MainController@contact');
-Route::get('faq', 'App\Http\Controllers\MainController@faq');
-Route::get('blog', 'App\Http\Controllers\MainController@blog');
-
+Route::get('', [App\Http\Controllers\MainController::class, 'home'])->name('home');
+Route::get('home', [App\Http\Controllers\MainController::class, 'home'])->name('home');
+Route::get('projects', [App\Http\Controllers\MainController::class, 'projects'])->name('projects');
+Route::get('about_us', [App\Http\Controllers\MainController::class, 'about_us'])->name('about_us');
+Route::get('gallery', [App\Http\Controllers\MainController::class, 'gallery'])->name('gallery');
+Route::get('testimonial', [App\Http\Controllers\MainController::class, 'testimonial'])->name('testimonial');
+Route::get('contactus', [App\Http\Controllers\MainController::class, 'contactus'])->name('contactus');
 
 Route::get('product/{product_url}', [App\Http\Controllers\MainController::class, 'product'])->name('product');
 Route::get('admin', [App\Http\Controllers\MainController::class, 'admin'])->name('admin');
