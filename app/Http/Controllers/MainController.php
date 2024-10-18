@@ -40,17 +40,18 @@ class MainController extends BaseController
 
         }
 
-        public function about(){
+        public function home (){
+			
+            return view("welcome");
+
+        }
+
+        public function about_us(){
 			
             return view("about");
 
         }
 
-        public function opportunities(){
-			
-            return view("opportunities");
-
-        }
 
         public function projects(){
 			
@@ -64,7 +65,7 @@ class MainController extends BaseController
 
         }
 
-        public function contact(){
+        public function contactus(){
 			
             return view("contact");
 
