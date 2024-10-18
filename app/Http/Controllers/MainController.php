@@ -32,6 +32,7 @@ use DateInterval;
 class MainController extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
+    
 
 
         public function welcome(){
