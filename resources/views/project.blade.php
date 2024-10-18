@@ -27,6 +27,66 @@
                                 </div>
                             </div>
                         </div>
+						<div class="col-lg-3 col-md-3 col-sm-3">
+                            <div class="section-head">
+                                <h4 class="text-uppercase">Upcoming Projects</h4>
+
+                            </div>
+                            <div class="section-content">
+                                                
+                                <div class="owl-carousel client-logo-carousel-1 owl-btn-center-lr">
+@foreach ($Upcomingprojects as $pro)
+                                    <div class="item">
+                                        <div class="ow-client-logo">
+                                            <div class="client-logo wt-img-effect client-logo-media on-color bdr-1 bdr-gray">
+                                            <a href="javascript:void(0);"><img src="{{ URL::to('/') }}/upload/projectsave/{{ $pro->photo }}" alt=""></a></div>
+                                        </div>
+                                    </div>
+@endforeach
+                                </div>
+                            </div>   
+							<hr>
+							
+                                <div class="section-head">
+                                <h4 class="text-uppercase">Progress Projects</h4>
+
+                            </div>
+                            <div class="section-content">
+                                                
+                                <div class="owl-carousel client-logo-carousel-1 owl-btn-center-lr">
+@foreach ($Progressprojects as $pro)
+                                    <div class="item">
+                                        <div class="ow-client-logo">
+                                            <div class="client-logo wt-img-effect client-logo-media on-color bdr-1 bdr-gray">
+                                            <a href="javascript:void(0);"><img src="{{ URL::to('/') }}/upload/projectsave/{{ $pro->photo }}" alt=""></a></div>
+                                        </div>
+                                    </div>
+@endforeach
+                                </div>
+                            </div>   
+							<hr>
+							
+ <div class="section-head">
+                                <h4 class="text-uppercase">Completed Projects</h4>
+
+                            </div>
+                            <div class="section-content">
+                                                
+                                <div class="owl-carousel client-logo-carousel-1 owl-btn-center-lr">
+@foreach ($Completedprojects as $pro)
+                                    <div class="item">
+                                        <div class="ow-client-logo">
+                                            <div class="client-logo wt-img-effect client-logo-media on-color bdr-1 bdr-gray">
+                                            <a href="javascript:void(0);"><img src="{{ URL::to('/') }}/upload/projectsave/{{ $pro->photo }}" alt=""></a></div>
+                                        </div>
+                                    </div>
+@endforeach
+                                </div>
+                            </div>   
+							<hr>
+
+                            </div>     
+							
 						</div>
 				   </aside>
                 </div>

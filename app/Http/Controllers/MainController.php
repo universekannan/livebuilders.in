@@ -43,14 +43,17 @@ class MainController extends BaseController
         }
     public function project($id) {
       $project = DB::table( 'project' )->where( 'id', $id )->first();
-
-        return view( 'project', compact( 'project' ) );
+           $Upcomingprojects = DB::table( 'project' )->where( 'project_status_id', '1' )->orderBy( 'id', 'Asc' )->limit(6)->get();
+           $Progressprojects = DB::table( 'project' )->where( 'project_status_id', '2' )->orderBy( 'id', 'Asc' )->limit(6)->get();
+           $Completedprojects = DB::table( 'project' )->where( 'project_status_id', '3' )->orderBy( 'id', 'Asc' )->limit(6)->get();
+        return view( 'project', compact( 'project','Upcomingprojects','Progressprojects','Completedprojects' ) );
     }
 
         public function about_us(){
-			
-
-            return view("about");
+           $Upcomingprojects = DB::table( 'project' )->where( 'project_status_id', '1' )->orderBy( 'id', 'Asc' )->limit(6)->get();
+           $Progressprojects = DB::table( 'project' )->where( 'project_status_id', '2' )->orderBy( 'id', 'Asc' )->limit(6)->get();
+           $Completedprojects = DB::table( 'project' )->where( 'project_status_id', '3' )->orderBy( 'id', 'Asc' )->limit(6)->get();
+          return view( 'about', compact( 'Upcomingprojects','Progressprojects','Completedprojects' ) );
 
         }
 

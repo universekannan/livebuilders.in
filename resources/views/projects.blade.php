@@ -1,44 +1,43 @@
 @extends('layouts.app')
 @section('content')
-     <div class="page-content">
-        <div class="wt-bnr-inr overlay-wraper" style="background-image:url(asset/images/banner/all.jpg);">
-            <div class="overlay-main bg-black" style="opacity:0.5;"></div>
-            <div class="container">
-                <div class="wt-bnr-inr-entry">
-                 <center>   <h1 class="text-white">{{ $projecttype->project_status_name }}</h1></center> 
-                </div>
-            </div>
-        </div>
-
-        <div class="section-full bg-white  p-t80 p-b70">
-            <div class="container">
-                <div class="section-content">
-                    <div class="row">
-@foreach ($products as $pro)
-                       <div class="col-md-4 col-sm-4 m-b30">
-                            <div class="wt-box">
-                                <div class="wt-media">
-                                    <a href="{{ url('project') }}/{{ $pro->id }}"><img src="{{ URL::to('/') }}/upload/projectsave/{{ $pro->photo }}" alt="{{ $pro->project_name }}"></a>
-                                </div>
-                                <div class="wt-info">
-                                    <h4 class="wt-title m-t20"><a href="project.php">{{ $pro->project_name }}</a></h4>
+<div class="page-content">
+   <div class="wt-bnr-inr overlay-wraper" style="background-image:url(asset/images/banner/all.jpg);">
+      <div class="overlay-main bg-black" style="opacity:0.5;"></div>
+      <div class="container">
+         <div class="wt-bnr-inr-entry">
+            <center>
+               <h1 class="text-white">{{ $projecttype->project_status_name }}</h1>
+            </center>
+         </div>
+      </div>
+   </div>
+   <div class="section-full bg-white  p-t80 p-b70">
+      <div class="container">
+         <div class="section-content">
+            <div class="row">
+               @foreach ($products as $pro)
+               <div class="col-md-4 col-sm-4 m-b30">
+                  <div class="wt-box">
+                     <div class="wt-media">
+                        <a href="{{ url('project') }}/{{ $pro->id }}"><img src="{{ URL::to('/') }}/upload/projectsave/{{ $pro->photo }}" alt="{{ $pro->project_name }}"></a>
+                     </div>
+                     <div class="wt-info">
+                        <h4 class="wt-title m-t20"><a href="project.php">{{ $pro->project_name }}</a></h4>
                         <p>{{ $pro->project_name }}, {{ $pro->project_name }}{{ $pro->project_owner }},'{{ $pro->project_address }}</p>
-                                    <a href="{{ url('project') }}/{{ $pro->id }}" class="site-button skew-icon-btn ">More<i class="fa fa-angle-double-right"></i></a>
-                                </div>
-                            </div>
-                        </div>
-@endforeach
-
-                    </div>
-                </div>
-                
+                        <a href="{{ url('project') }}/{{ $pro->id }}" class="site-button skew-icon-btn ">More<i class="fa fa-angle-double-right"></i></a>
+                     </div>
+                  </div>
+               </div>
+               @endforeach
             </div>
-        </div>
-           
-    </div>
-
-    <!-- CONTENT END -->
-	
+            <td colspan="7" class="mt-2">
+               {!! $products->links('pagination::bootstrap-4') !!}
+            </td>
+         </div>
+      </div>
+   </div>
+</div>
+<!-- CONTENT END -->
 <footer class="site-footer footer-dark">
 <div class="call-to-action-wrap call-to-action-skew" style="background-image:url(images/background/bg-4.png); background-repeat:repeat;background-color:#273447;">
    <div class="container">
@@ -60,5 +59,3 @@
    </div>
 </div>
 @endsection
-
-
