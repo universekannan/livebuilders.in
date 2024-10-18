@@ -15,16 +15,11 @@ class BackupController extends Controller
   {
     $this->middleware( 'auth' );
   }
-
+ 
 
     public function index(){
 
-      if((Auth::user()->usertype_id == '1') || (Auth::user()->user_type_id == '2') || (Auth::user()->user_type_id == '3')){
-
-   } else
-    {
-    return redirect( 'dashboard' );
-    }
+   
 
         $disk = Storage::disk(config('laravel-backup.backup.destination.disks'));
         $files = $disk->files("MiMart");

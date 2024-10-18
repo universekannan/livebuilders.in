@@ -1,6 +1,6 @@
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
-    <a href="{{ url('dashboard') }}" class="brand-link">
-        <img src="{{ asset('/assets/images/preloader.gif') }}" class="brand-image img-circle elevation-3">VijayHardwares
+    <a href="{{ url('admin/dashboard') }}" class="brand-link">
+        <img src="{{ asset('/assets/images/preloader.gif') }}" class="brand-image img-circle elevation-3">LiveBuilders
     </a>
     <div class="sidebar">
         <nav class="mt-2">
@@ -54,42 +54,21 @@
                     </ul>
                 </li>
 				
-				<li class="nav-item has-treeview {{ request()->segment(2) == 'location' || request()->segment(2) == 'categorys' || request()->segment(2) == 'banners' || request()->segment(2) == 'subcategory' ? 'menu-open' : '' }}">
-					<a href="#"
-						class="nav-link {{ request()->segment(2) == 'location' || request()->segment(2) == 'categorys' || request()->segment(2) == 'banners' || request()->segment(2) == 'subcategory' ? 'active' : '' }}">
-						<i class="nav-icon fas fa-cog"></i>
-						<p>
-							Setting
-							<i class="right fas fa-angle-left"></i>
-						</p>
-					</a>
-					<ul class="nav nav-treeview">
-						<li class="nav-item">
-							<a href="{{ route('banners') }}"
-								class="nav-link {{ request()->segment(2) == 'banners' ? 'active' : '' }}">
-								<i class="far fa-dot-circle nav-icon"></i>
-								<p>Banners</p>
-							</a>
-						</li>
-						<li class="nav-item">
-							<a href="{{ route('backup') }}"
-								class="nav-link {{ request()->is('backup') ? 'active' : '' }}">
-								<i class="far fa-dot-circle nav-icon"></i>
-								<p>Backup</p>
-							</a>
-						</li>
-						<li class="nav-item">
-							<a href="{{ url('admin/category') }}"
-								class="nav-link {{ request()->segment(2) == 'category' || request()->segment(2) == 'subcategory' ? 'active' : '' }}">
+                <li class="nav-item has-treeview {{ request()->segment(1) == 'Banners' ? 'menu-open' : '' }}">
+                    <a href="{{ route('banners') }}" class="nav-link {{ request()->segment(2) == 'banners' ? 'active' : '' }}">
+                        <i class="far fa-dot-circle nav-icon"></i>
+                        <p>Banners</p>
+                    </a>
+                </li>
 
-								<i class="far fa-dot-circle nav-icon"></i>
-								<p>Category</p>
-							</a>
-						</li>
+                <li class="nav-item has-treeview {{ request()->segment(1) == 'Backup' ? 'menu-open' : '' }}">
+                   <a href="{{ route('backup') }}" class="nav-link {{ request()->is('backup') ? 'active' : '' }}">
+                        <i class="far fa-dot-circle nav-icon"></i>
+                        <p>Backup</p>
+                    </a>
+                </li>
 						
 						
-					</ul>
-				</li>
                 <li class="nav-item has-treeview {{ request()->segment(1) == 'profile' || request()->is('changepassword') ? 'menu-open' : '' }}">
                     <a href="" class="nav-link">
                         <i class="nav-icon fas fa-user"></i>
