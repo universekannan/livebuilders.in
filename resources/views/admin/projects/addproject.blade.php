@@ -12,21 +12,7 @@
 
                     <form action="{{ url('saveproject') }}" method="post" enctype="multipart/form-data">
                         {{ csrf_field() }}
-                        <!-- <div class="form-group row">
-                            <label for="project_name" class="col-sm-2 col-form-label"><span
-                                style="color:red">*</span>Category</label>
-                                <div class="col-sm-5">
-                                    <select name="cat_id" id="cat_id" required="required"
-                                    class="form-control select2">
-                                    <option value="">Select Category</option>
-                                    @foreach ($category as $cat)
-                                    <option value="{{ $cat->id }}">
-                                        {{ $cat->id }}
-                                    </option>
-                                    @endforeach
-                                </select>
-                            </div>
-                    </div> -->
+                       
             
                       <div class="form-group row">
                           <label for="project_status_id" class="col-sm-2 col-form-label"><span

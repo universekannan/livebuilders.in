@@ -38,10 +38,10 @@ class ProductsController extends Controller {
     public function addproject() {
         $seller_id = auth()->user()->id;
         $project = DB::table( 'project' )->orderBy( 'id', 'desc' )->get();
-        $category = DB::table( 'category' )->where( 'id', 0 )->where( 'status', 1 )->orderBy( 'id', 'desc' )->get();
+       
         $seller = DB::table( 'users' )->where( 'id', $seller_id )->where( 'status', 1 )->orderBy( 'id', 'desc' )->get();
 
-        return view( 'admin/projects/addproject', compact( 'project', 'category', 'seller') );
+        return view( 'admin/projects/addproject', compact( 'project', 'seller') );
     }
 
     public function saveproject( Request $request ) {
@@ -125,7 +125,8 @@ class ProductsController extends Controller {
         $project_name = str_replace( [ '\\', '/' ], ' ', $project_name );
         $output = preg_replace( '!\s+!', ' ', $project_name );
         $project_url =  strtolower( str_replace( ' ', '_', $output ) );
-        DB::table( 'project' )->where('id',$project_id)->update([
+        DB::table( 'project' )->where('id',$project_id)->update([ 
+            
             'project_status_id'   => $request->project_status_id,
             'project_name'   => $request->project_name,
             'project_owner'  => $request->project_owner,
