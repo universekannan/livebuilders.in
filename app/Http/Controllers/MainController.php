@@ -39,18 +39,25 @@ class MainController extends BaseController
            $Upcomingprojects = DB::table( 'project' )->where( 'project_status_id', '1' )->orderBy( 'id', 'Asc' )->limit(6)->get();
            $Progressprojects = DB::table( 'project' )->where( 'project_status_id', '2' )->orderBy( 'id', 'Asc' )->limit(6)->get();
            $Completedprojects = DB::table( 'project' )->where( 'project_status_id', '3' )->orderBy( 'id', 'Asc' )->limit(6)->get();
-          return view( 'welcome', compact( 'Upcomingprojects','Progressprojects','Completedprojects' ) );
+		   
+           $banners = DB::table( 'banners' )->where( 'status', '1' )->orderBy( 'id', 'Asc' )->get();
+           $projectstatus = DB::table( 'project_status' )->orderBy( 'id', 'Asc' )->get();
+           $projectimg = DB::table( 'project' )->orderBy( 'id', 'Asc' )->get();
+          return view( 'welcome', compact( 'banners','Upcomingprojects','Progressprojects','Completedprojects','projectstatus','projectimg' ) );
         }
     public function project($id) {
       $project = DB::table( 'project' )->where( 'id', $id )->first();
-
-        return view( 'project', compact( 'project' ) );
+           $Upcomingprojects = DB::table( 'project' )->where( 'project_status_id', '1' )->orderBy( 'id', 'Asc' )->limit(6)->get();
+           $Progressprojects = DB::table( 'project' )->where( 'project_status_id', '2' )->orderBy( 'id', 'Asc' )->limit(6)->get();
+           $Completedprojects = DB::table( 'project' )->where( 'project_status_id', '3' )->orderBy( 'id', 'Asc' )->limit(6)->get();
+        return view( 'project', compact( 'project','Upcomingprojects','Progressprojects','Completedprojects' ) );
     }
 
         public function about_us(){
-			
-
-            return view("about");
+           $Upcomingprojects = DB::table( 'project' )->where( 'project_status_id', '1' )->orderBy( 'id', 'Asc' )->limit(6)->get();
+           $Progressprojects = DB::table( 'project' )->where( 'project_status_id', '2' )->orderBy( 'id', 'Asc' )->limit(6)->get();
+           $Completedprojects = DB::table( 'project' )->where( 'project_status_id', '3' )->orderBy( 'id', 'Asc' )->limit(6)->get();
+          return view( 'about', compact( 'Upcomingprojects','Progressprojects','Completedprojects' ) );
 
         }
       
@@ -76,17 +83,17 @@ class MainController extends BaseController
 
         }
         public function gallery(){
-			
-            return view("gallery");
-
+           $projectstatus = DB::table( 'project_status' )->orderBy( 'id', 'Asc' )->get();
+           $projectimg = DB::table( 'project' )->orderBy( 'id', 'Asc' )->get();
+        return view( 'gallery', compact( 'projectstatus','projectimg' ) );
         }
+		
         public function faq(){
 			
             return view("faq");
 
         }
    
-
 		public function blog(){
 			
 			return view("blog");

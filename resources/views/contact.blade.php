@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('content')
 <div class="page-content">
-         <div class="wt-bnr-inr overlay-wraper" style="background-image:url(asset/images/banner/gallery-banner.jpg);">
+         <div class="wt-bnr-inr overlay-wraper" style="background-image:url(assets/images/banner/gallery-banner.jpg);">
             	<div class="overlay-main bg-black" style="opacity:0.5;"></div>
                 <div class="container">
                     <div class="wt-bnr-inr-entry">
@@ -94,7 +94,7 @@
                                     </div>
                                 </div>
                                 
-                                <form class="cons-contact-form" method="post" action="http://thewebmax.com/constrot/form-handler.php">
+                                <form class="cons-contact-form" method="post" action="">
                          <div class="wt-icon-box-wraper center p-a30 bdr-2 bdr-gray-light">
                                     <div class="row">
                                     
@@ -176,7 +176,7 @@
 
             <!-- COLL-TO ACTION START -->
 
-            <div class="call-to-action-wrap call-to-action-skew" style="background-image:url(asset/images/background/bg-4.png); background-repeat:repeat;background-color:#273447;">
+            <div class="call-to-action-wrap call-to-action-skew" style="background-image:url(assets/images/background/bg-4.png); background-repeat:repeat;background-color:#273447;">
 
                 <div class="container">
 

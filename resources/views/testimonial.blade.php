@@ -5,7 +5,7 @@
             <div class="page-content">
         
         <!-- INNER PAGE BANNER --> 
-        <div class="wt-bnr-inr overlay-wraper" style="background-image:url(asset/images/banner/all.jpg);">
+        <div class="wt-bnr-inr overlay-wraper" style="background-image:url(assets/images/banner/all.jpg);">
             <div class="overlay-main bg-black" style="opacity:0.5;"></div>
             <div class="container">
                 <div class="wt-bnr-inr-entry">
@@ -28,7 +28,7 @@
                         
                             <div class="testimonial-grid-4 testimonial-bg">
                                 <div class="testimonial-text clearfix">
-                                    <div class="testimonial-pic"><img src="asset/images/testimonials/testimonial.jpg" width="100" height="100" alt=""></div>
+                                    <div class="testimonial-pic"><img src="assets/images/testimonials/testimonial.jpg" width="100" height="100" alt=""></div>
                                     <div class="testimonial-paragraph">
                                         <p>Very good builders who provides nice housing.My first investment is with Live builders and I have gained very good returns.</p>
                                         <br>
@@ -45,7 +45,7 @@
                         <div class="col-md-4 m-b30">
                             <div class="testimonial-grid-4 testimonial-bg">
                                 <div class="testimonial-text clearfix">
-                                    <div class="testimonial-pic"><img src="asset/images/testimonials/testimonial.jpg" width="100" height="100" alt=""></div>
+                                    <div class="testimonial-pic"><img src="assets/images/testimonials/testimonial.jpg" width="100" height="100" alt=""></div>
                                     <div class="testimonial-paragraph">
                                         <p>A very professional organisation which operate to good ethical standards. My experiences have been nothing short of super! Keep up the good work.</p>
                                     </div>
@@ -61,7 +61,7 @@
                         <div class="col-md-4 m-b30">
                             <div class="testimonial-grid-4 testimonial-bg">
                                 <div class="testimonial-text clearfix">
-                                    <div class="testimonial-pic"><img src="asset/images/testimonials/testimonial.jpg" width="100" height="100" alt=""></div>
+                                    <div class="testimonial-pic"><img src="assets/images/testimonials/testimonial.jpg" width="100" height="100" alt=""></div>
                                     <div class="testimonial-paragraph">
                                         <p>A very good builder, providing quality homes at affordable rates. Do check them out if you are in the market for a new Home.</p>
                                         <br>
@@ -82,22 +82,9 @@
             </div>
             
         </div>
-        <!-- SECTION CONTENT END -->            
-     
-       
-        <!-- SECTION CONTENT START --> 
-        
-        
     </div>
-    <!-- CONTENT END -->
 
-
-    <!-- CONTENT END -->
-    
-    <!-- FOOTER START -->
      <footer class="site-footer footer-dark">
-
-        <!-- COLL-TO ACTION START -->
 
         <div class="call-to-action-wrap call-to-action-skew" style="background-image:url(asset/images/background/bg-4.png); background-repeat:repeat;background-color:#273447;">
 
