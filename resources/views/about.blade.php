@@ -2,7 +2,7 @@
 @section('content')
 <div class="page-content ">
    <!-- INNER PAGE BANNER -->
-   <div class="wt-bnr-inr overlay-wraper" style="background-image:url(asset/images/banner/blog-banner.jpg);">
+   <div class="wt-bnr-inr overlay-wraper" style="background-image:url(assets/images/banner/blog-banner.jpg);">
       <div class="overlay-main bg-black" style="opacity:0.5;"></div>
       <div class="container">
          <div class="wt-bnr-inr-entry">
@@ -12,13 +12,14 @@
          </div>
       </div>
    </div>
+   
    <div class="section-full p-t80 p-b50 bg-gray">
       <div class="container">
          <div class="row">
             <div class="col-md-9">
                <div class="blog-post blog-lg date-style-3 date-skew">
                   <div class="wt-post-media wt-img-effect zoom-slow">
-                     <a href="javascript:void(0);"><img src="asset/images/blog/default/thum1.jpg" alt=""></a>
+                     <a href="javascript:void(0);"><img src="assets/images/blog/default/thum1.jpg" alt=""></a>
                   </div>
                   <div class="wt-post-info p-a30 p-b15  bg-white">
                      <div class="wt-post-title ">

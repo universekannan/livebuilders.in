@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('content')
       <div class="page-content">
-        <div class="wt-bnr-inr overlay-wraper" style="background-image:url(asset/images/banner/gallery-banner.jpg);">
+        <div class="wt-bnr-inr overlay-wraper" style="background-image:url(assets/images/banner/gallery-banner.jpg);">
             <div class="overlay-main bg-black" style="opacity:0.5;"></div>
             <div class="container">
                 <div class="wt-bnr-inr-entry">
@@ -9,7 +9,7 @@
                 </div>
             </div>
         </div>
-<div class="section-full p-t80" style="background-image:url(images/background/bg-4.png); background-repeat:repeat;background-color:#273447; ">
+<div class="section-full p-t80" style="background-image:url(assets/images/background/bg-4.png); background-repeat:repeat;background-color:#273447; ">
    <div class="overlay-main"></div>
    <div class="container">
       <div class="section-head">
@@ -31,7 +31,7 @@
          </div>
       </div>
    </div>
-   <div class="section-full p-t80 p-b50  bg-no-repeat bg-bottom-center bg-cover" style="background-image:url(images/background/bg-6.jpg);">
+   <div class="section-full p-t80 p-b50  bg-no-repeat bg-bottom-center bg-cover" style="background-image:url(assets/images/background/bg-6.jpg);">
       <div class="container">
          <!-- GALLERY CONTENT START -->
          <div class="row">

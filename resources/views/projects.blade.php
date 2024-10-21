@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('content')
 <div class="page-content">
-   <div class="wt-bnr-inr overlay-wraper" style="background-image:url(asset/images/banner/all.jpg);">
+   <div class="wt-bnr-inr overlay-wraper" style="background-image:url(assets/images/banner/all.jpg);">
       <div class="overlay-main bg-black" style="opacity:0.5;"></div>
       <div class="container">
          <div class="wt-bnr-inr-entry">
@@ -39,7 +39,7 @@
 </div>
 <!-- CONTENT END -->
 <footer class="site-footer footer-dark">
-<div class="call-to-action-wrap call-to-action-skew" style="background-image:url(images/background/bg-4.png); background-repeat:repeat;background-color:#273447;">
+<div class="call-to-action-wrap call-to-action-skew" style="background-image:url(assets/images/background/bg-4.png); background-repeat:repeat;background-color:#273447;">
    <div class="container">
       <div class="row">
          <div class="col-md-8 col-sm-8">
