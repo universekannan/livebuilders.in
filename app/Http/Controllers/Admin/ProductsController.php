@@ -88,14 +88,14 @@ class ProductsController extends Controller {
 	  $project_status = DB::table('project_status')->get();
       $sql = "select * from project_image where project_id=$id";
       $projectimage = DB::select( DB::raw( $sql ) );
-     //print_r($projects);die;
+      
       return view( 'admin/projects/editproject', compact( 'projects','project_status','projectimage') );
     }
 
 
     public function saveprojectimage( Request $request ) {
-
-        $project_id = $request->project_id;
+  
+      $project_id = $request->project_id;
         $project_name = $request->project_name;
         $output = preg_replace( '!\s+!', ' ', $project_name );
         $project_url =  strtolower( str_replace( ' ', '_', $output ) );
@@ -141,7 +141,7 @@ class ProductsController extends Controller {
         $photo = '';  
         if ( $request->photo != null ) {
             $photo = $last_insert_id . '.' . $request->file( 'photo' )->extension();
-            $filepath = public_path( 'upload' . DIRECTORY_SEPARATOR . 'product' . DIRECTORY_SEPARATOR );
+            $filepath = public_path( 'upload' . DIRECTORY_SEPARATOR . 'projectsave' . DIRECTORY_SEPARATOR );
             move_uploaded_file( $_FILES[ 'photo' ][ 'tmp_name' ], $filepath . $photo );
 
             $addimg = DB::table( 'project' )->where( 'id', $last_insert_id )->update( [

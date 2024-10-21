@@ -72,6 +72,7 @@ Irumbuliyur,East Tamabaram Chennai -59. " />
 	<div class="page-wraper"> 
 
         @include('layouts.header')
+      
 
     @yield('content')
         @include('layouts.footer')

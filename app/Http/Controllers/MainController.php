@@ -53,6 +53,7 @@ class MainController extends BaseController
             return view("about");
 
         }
+      
 
 
         public function projects($id){
