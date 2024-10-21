@@ -1,14 +1,15 @@
 @extends('layouts.app')
 @section('content')
 <div class="page-content ">
-            <div class="wt-bnr-inr overlay-wraper" style="background-image:url(assets/images/banner/blog-banner.jpg);">
-            	<div class="overlay-main bg-black" style="opacity:0.5;"></div>
+        <div class="wt-bnr-inr overlay-wraper" style="background-image:url({{ URL::to('/') }}/assets/images/banner/all.jpg);">
+            <div class="overlay-main bg-black" style="opacity:0.5;"></div>
                 <div class="container">
                     <div class="wt-bnr-inr-entry">
                       <center>  <h1 class="text-white">About  {{ $project->project_name }}</h1></center>
                     </div>
                 </div>
-            </div>               
+            </div>       
+			
             <div class="section-full p-t80 p-b50 bg-gray">
                 <div class="container">
                     <div class="row">

@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('content')
 <div class="page-content">
-   <div class="wt-bnr-inr overlay-wraper" style="background-image:url(assets/images/banner/all.jpg);">
+   <div class="wt-bnr-inr overlay-wraper" style="background-image:url({{ URL::to('/') }}/assets/images/banner/all.jpg);">
       <div class="overlay-main bg-black" style="opacity:0.5;"></div>
       <div class="container">
          <div class="wt-bnr-inr-entry">
