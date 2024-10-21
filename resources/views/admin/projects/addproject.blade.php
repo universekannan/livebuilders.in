@@ -1,10 +1,10 @@
 @extends('admin/layouts.app')
 @section('content')
-
+  
 <div class="container-fluid">
     <div class="row">
         <div class="col-md-12">
-            <div class="card card-primary">
+            <div class="card card-primary">  
                 <div class="card-header">
                     <h3 class="card-title">Add Project</h3>
                 </div>

@@ -39,7 +39,7 @@
                         </li>                       
                         <li class="nav-item">
                             <a href="{{ url('admin/projects/2') }}"
-                                class="nav-link {{ request()->segment(1) == '2' ? 'active' : '' }}">
+                                 class="nav-link {{ request()->segment(1) == '2' ? 'active' : '' }}">
                                 <i class="fa fa-ban nav-icon"></i>
                                 <p>Progress Projects</p>
                             </a>
@@ -52,6 +52,13 @@
                             </a>
                         </li>
                     </ul>
+                </li>
+
+                 <li class="nav-item has-treeview {{ request()->segment(1) == 'contact' ? 'menu-open' : '' }}">
+                    <a href="{{ url('admin/contact') }}" class="nav-link {{ Request::is('contact') ? 'active' : '' }}">
+                        <i class="nav-icon fa fas fa-address-book fa-lg"></i>
+                        <p>Enquiry</p>
+                    </a>
                 </li>
 				
                 <li class="nav-item has-treeview {{ request()->segment(1) == 'Banners' ? 'menu-open' : '' }}">

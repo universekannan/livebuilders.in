@@ -93,43 +93,44 @@
                                        <span class="separator-right bg-primary"></span>
                                     </div>
                                 </div>
+                                  <form action="{{ url('contactdetails') }}" method="post" enctype="multipart/form-data">
+                        {{ csrf_field() }} 
                                 
-                                <form class="cons-contact-form" method="post" action="">
                          <div class="wt-icon-box-wraper center p-a30 bdr-2 bdr-gray-light">
                                     <div class="row">
                                     
                                         <div class="col-md-12">
                                             <div class="form-group">
-                                                <div class="input-group">
-                                                    <span class="input-group-addon"><i class="fa fa-user"></i></span>
-                                                    <input name="username" type="text" required class="form-control" placeholder="Name">
+                                                <div for="full_name" class="input-group">
+                                                  <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                                                    <input name="full_name" type="text" required class="form-control" placeholder="Name">
                                                 </div>
                                             </div>
                                         </div>
         
                                         <div class="col-md-12">
                                             <div class="form-group">
-                                                <div class="input-group">
+                                                <div for="email_address" class="input-group">
                                                     <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
-                                                    <input name="email" type="text" class="form-control" required placeholder="Email">
+                                                    <input name="email_address" type="text" class="form-control" required placeholder="Email">
                                                 </div>
                                             </div>
         
                                         </div>
                                         <div class="col-md-12">
                                             <div class="form-group">
-                                                <div class="input-group">
-                                                    <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
-                                                    <input name="email" type="text" class="form-control" required placeholder="Email">
+                                                <div for="phone" class="input-group">
+                                                    <span class="input-group-addon"><i class="fa fa-phone"></i></span>
+                                                    <input name="phone" type="text" class="form-control" required placeholder="phone">
                                                 </div>
                                             </div>
         
                                         </div>
                                         <div class="col-md-12">
                                             <div class="form-group">
-                                                <div class="input-group">
-                                                    <span class="input-group-addon v-align-m"><i class="fa fa-pencil"></i></span>
-                                                    <textarea name="message" rows="4" class="form-control " required placeholder="Message"></textarea>
+                                                <div for="subject" class="input-group">
+                                                    <span  class="input-group-addon v-align-m"><i class="fa fa-pencil"></i></span>
+                                                    <textarea name="subject" rows="4" class="form-control " required placeholder="Message"></textarea>
                                                 </div>
                                             </div>
                                         </div>

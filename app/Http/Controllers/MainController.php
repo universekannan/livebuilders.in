@@ -75,14 +75,45 @@ class MainController extends BaseController
 			
             return view("testimonial");
 
-        }
+        }  
+  
+        public function contactus(){ 
 
-        public function contactus(){
 			
             return view("contact");
 
         }
-        public function gallery(){
+
+      public function contactdetails(Request $request){
+
+       $contactdetails = DB::table('contact_details')->insertGetId([
+      'full_name'           =>   $request->full_name,
+      'email_address'       =>   $request->email_address,
+      'phone'               =>   $request->phone,
+      'subject'             =>   $request->subject,
+      'message'             =>   $request->message,
+      'status'              =>   1, 
+      'enquiry_date'        =>   date( 'Y-m-d H:i:s' ),
+      
+      ]);
+      return view("contact") ;
+    }
+
+     public function updatedetails (Request $request)
+      {
+
+        $updatedetails  = DB::table('contact_details')->where('id', $request->row_id)->Update([
+            'full_name'     => $request->full_name,
+            'subject'        => $request->subject,
+            'email_address'  => $request->email_address,
+            'phone'          => $request->phone,
+            'status'        => $request->status,
+        ]);
+
+        return redirect()->back()->with( 'success', 'Update Successfully ... !' );
+    }
+   
+    public function gallery(){
            $projectstatus = DB::table( 'project_status' )->orderBy( 'id', 'Asc' )->get();
            $projectimg = DB::table( 'project' )->orderBy( 'id', 'Asc' )->get();
         return view( 'gallery', compact( 'projectstatus','projectimg' ) );
