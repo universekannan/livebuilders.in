@@ -9,10 +9,10 @@
             <div id="rev_slider_1014_1_wrapper" class="rev_slider_wrapper fullscreen-container" data-alias="typewriter-effect" data-source="gallery">
                <div id="rev_slider_1014_1" class="rev_slider fullscreenbanner" style="display:none;" data-version="5.4.1">
                   <ul>
-                     <!-- SLIDE 1 -->	
-                     <li data-index="rs-1000" data-transition="slidingoverlayhorizontal" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="default"  data-thumb="images/slider1.jpg"  data-rotate="0"  data-saveperformance="off"  data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
+@foreach ($banners as $ban)
+                     <li data-index="rs-1000" data-transition="slidingoverlayhorizontal" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="default"  data-thumb="{{ URL::to('/') }}/upload/banners/{{ $ban->photo }}"  data-rotate="0"  data-saveperformance="off"  data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
                         <!-- MAIN IMAGE -->
-                        <img src="images/slider1.jpg"  alt=""  data-bgposition="center bottom" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina/>
+                        <img src="{{ URL::to('/') }}/upload/banners/{{ $ban->photo }}"  alt=""  data-bgposition="center bottom" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina/>
                         <!-- LAYER NR. 1 [ for overlay ] -->
                         <div class="tp-caption tp-shape tp-shapewrapper " 
                            id="slide-100-layer-1" 
@@ -62,7 +62,7 @@
                            font-weight: 700; 
                            color: rgba(255, 255, 255, 1.00);
                            border-width:0px;">
-                           <span class="text-uppercase" style="font-family:'Roboto' ;"><span class="text-primary">We Build </span> Your Dream Home</span>
+                           <span class="text-uppercase" style="font-family:'Roboto' ;"><span class="text-primary">{{ $ban->banner_name }}
                         </div>
                         <!-- LAYER NR. 3 [ for paragraph] -->
                         <div class="tp-caption  tp-resizeme" 
@@ -89,7 +89,7 @@
                            font-weight: 500; 
                            color: rgba(255, 255, 255, 0.85);
                            border-width:0px;">
-                           <span style="font-family:'Roboto';">We are the best construction company in south india.We have 12 years of experience and we buid your dream buildings.</span>
+                           <span style="font-family:'Roboto';">{{ $ban->description }}</span>
                         </div>
                         <!-- LAYER NR. 4 [ for readmore botton ] -->
                         <div class="tp-caption tp-resizeme" 	
@@ -112,292 +112,14 @@
                            data-paddingbottom="[0,0,0,0]"
                            data-paddingleft="[0,0,0,0]"
                            style="z-index:13; text-transform:uppercase; font-weight:700;">
-                           <a href="gallery.php" class="site-button button-lg skew-icon-btn m-r15">Read more <i class="fa fa-angle-double-right"></i></a>
+                           <a href="{{ url('/projects') }}/3" class="site-button button-lg skew-icon-btn m-r15">Read more <i class="fa fa-angle-double-right"></i></a>
                         </div>
                      </li>
-                     <!--     <li data-index="rs-2000" data-transition="slidingoverlayhorizontal" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="default"  data-thumb="images/slider2.jpg"  data-rotate="0"  data-saveperformance="off"  data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
-                        <img src="images/slider2.jpg"  alt=""  data-bgposition="center bottom" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina/>
-                        
-                        <div class="tp-caption tp-shape tp-shapewrapper " 
-                        id="slide-200-layer-1" 
-                        data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" 
-                        data-y="['middle','middle','middle','middle']" data-voffset="['0','0','0','0']" 
-                        data-width="full"
-                        data-height="full"
-                        data-whitespace="nowrap"
-                        data-type="shape" 
-                        data-basealign="slide" 
-                        data-responsive_offset="off" 
-                        data-responsive="off"
-                        data-frames='[
-                        {"from":"opacity:0;","speed":1000,"to":"o:1;","delay":0,"ease":"Power4.easeOut"},
-                        {"delay":"wait","speed":1000,"to":"opacity:0;","ease":"Power4.easeOut"}
-                        ]'
-                        data-textAlign="['left','left','left','left']"
-                        data-paddingtop="[0,0,0,0]"
-                        data-paddingright="[0,0,0,0]"
-                        data-paddingbottom="[0,0,0,0]"
-                        data-paddingleft="[0,0,0,0]"
-                        
-                        style="z-index: 12;background-color:rgba(0, 0, 0, 0.5);border-color:rgba(0, 0, 0, 0);border-width:0px;"> 
-                        </div>
-                        
-                        <div class="tp-caption   tp-resizeme" 
-                        id="slide-200-layer-2" 
-                        data-x="['left','left','left','left']" data-hoffset="['30','30','30','100']" 
-                        data-y="['top','top','top','top']" data-voffset="['200','200','200','200']"  
-                        data-fontsize="['60','60','60','50']"
-                        data-lineheight="['70','70','70','60']"
-                        data-width="['1200','1200','1200','1200']"
-                        data-height="['none','none','none','none']"
-                        data-whitespace="['normal','normal','normal','normal']"
-                        
-                        data-type="text" 
-                        data-responsive_offset="on" 
-                        data-frames='[
-                        {"from":"y:100px(R);opacity:0;","speed":2000,"to":"o:1;","delay":500,"ease":"Power4.easeOut"},
-                        {"delay":"wait","speed":1000,"to":"y:-50px;opacity:0;","ease":"Power2.easeInOut"}
-                        ]'
-                        data-textAlign="['left','left','left','left']"
-                        data-paddingtop="[0,0,0,0]"
-                        data-paddingright="[0,0,0,0]"
-                        data-paddingbottom="[0,0,0,0]"
-                        data-paddingleft="[0,0,0,0]"
-                        
-                        style="z-index: 13; 
-                        white-space: normal; 
-                        font-weight: 700; 
-                        color: rgba(255, 255, 255, 1.00);
-                        border-width:0px;">
-                        <span class="text-uppercase" style="font-family:'Roboto' ;"><span class="text-primary">We Build </span> Your Dream School</span>
-                        </div>
-                        
-                        <div class="tp-caption  tp-resizeme" 
-                        id="slide-200-layer-3" 
-                        data-x="['left','left','left','left']" data-hoffset="['30','30','30','100']" 
-                        data-y="['top','top','top','top']" data-voffset="['300','300','300','300']"  
-                        data-fontsize="['18','18','18','30']"
-                        data-lineheight="['30','30','30','40']"
-                        data-width="['650','650','650','650']"
-                        data-height="['none','none','none','none']"
-                        data-whitespace="['normal','normal','normal','normal']"
-                        
-                        data-type="text" 
-                        data-responsive_offset="on"
-                        data-frames='[
-                        {"from":"y:100px(R);opacity:0;","speed":2000,"to":"o:1;","delay":1000,"ease":"Power4.easeOut"},
-                        {"delay":"wait","speed":1000,"to":"y:-50px;opacity:0;","ease":"Power2.easeInOut"}
-                        ]'
-                        data-textAlign="['left','left','left','left']"
-                        data-paddingtop="[0,0,0,0]"
-                        data-paddingright="[0,0,0,0]"
-                        data-paddingbottom="[0,0,0,0]"
-                        data-paddingleft="[0,0,0,0]"
-                        
-                        style="z-index: 13; 
-                        font-weight: 500; 
-                        color: rgba(255, 255, 255, 0.85);
-                        border-width:0px;">
-                        <span style="font-family:'Roboto';">We are the best construction company in south india.We have 24 years of experience and we buid your dream buildings.</span>
-                        </div>
-                        
-                        <div class="tp-caption tp-resizeme" 	
-                        id="slide-200-layer-4"						
-                        data-x="['left','left','left','left']" data-hoffset="['30','30','30','100']" 
-                        data-y="['top','top','top','top']" data-voffset="['430','430','450','500']"  
-                        data-lineheight="['none','none','none','none']"
-                        data-width="['300','300','300','300']"
-                        data-height="['none','none','none','none']"
-                        data-whitespace="['normal','normal','normal','normal']"
-                        
-                        data-type="text" 
-                        data-responsive_offset="on"
-                        data-frames='[ 
-                        {"from":"y:100px(R);opacity:0;","speed":2000,"to":"o:1;","delay":1500,"ease":"Power4.easeOut"},
-                        {"delay":"wait","speed":1000,"to":"y:-50px;opacity:0;","ease":"Power2.easeInOut"}
-                        ]'
-                        data-textAlign="['left','left','left','left']"
-                        data-paddingtop="[0,0,0,0]"
-                        data-paddingright="[0,0,0,0]"
-                        data-paddingbottom="[0,0,0,0]"
-                        data-paddingleft="[0,0,0,0]"
-                        
-                        style="z-index:13; text-transform:uppercase; font-weight:700;">
-                        <a href="gallery.php" class="site-button button-lg skew-icon-btn m-r15">Read more <i class="fa fa-angle-double-right"></i></a>
-                        </div>
-                        
-                        <div class="tp-caption tp-resizeme" 	
-                        id="slide-200-layer-5"						
-                        data-x="['left','left','left','left']" data-hoffset="['230','230','230','230']" 
-                        data-y="['top','top','top','top']" data-voffset="['490','490','490','600']"  
-                        data-fontsize="['none','none','none','none']"
-                        data-lineheight="['none','none','none','none']"
-                        data-width="['300','300','300','300']"
-                        data-height="['none','none','none','none']"
-                        data-whitespace="['normal','normal','normal','normal']"
-                        
-                        data-type="text" 
-                        data-responsive_offset="on"
-                        data-frames='[ 
-                        {"from":"y:100px(R);opacity:0;","speed":2000,"to":"o:1;","delay":2000,"ease":"Power4.easeOut"},
-                        {"delay":"wait","speed":1000,"to":"y:-50px;opacity:0;","ease":"Power2.easeInOut"}
-                        ]'
-                        data-textAlign="['left','left','left','left']"
-                        data-paddingtop="[0,0,0,0]"
-                        data-paddingright="[0,0,0,0]"
-                        data-paddingbottom="[0,0,0,0]"
-                        data-paddingleft="[0,0,0,0]"
-                        
-                        style="z-index: 13; text-transform:uppercase; font-weight:700;">
-                        <a href="gallery.php" class="site-button button-lg skew-icon-btn m-r15" >Read More<i class="fa fa-arrow-circle-o-right"></i></a>
-                        </div>     
-                        
-                        </li>
-                        
-                        <li data-index="rs-3000" data-transition="slidingoverlayhorizontal" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="default"  data-thumb="images/slider3.jpg"  data-rotate="0"  data-saveperformance="off"  data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
-                        
-                        <img src="images/slider3.jpg"  alt=""  data-bgposition="center bottom" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina/>
-                        
-                        <div class="tp-caption tp-shape tp-shapewrapper " 
-                        id="slide-300-layer-1" 
-                        data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" 
-                        data-y="['middle','middle','middle','middle']" data-voffset="['0','0','0','0']" 
-                        data-width="full"
-                        data-height="full"
-                        data-whitespace="nowrap"
-                        data-type="shape" 
-                        data-basealign="slide" 
-                        data-responsive_offset="off" 
-                        data-responsive="off"
-                        data-frames='[
-                        {"from":"opacity:0;","speed":1000,"to":"o:1;","delay":0,"ease":"Power4.easeOut"},
-                        {"delay":"wait","speed":1000,"to":"opacity:0;","ease":"Power4.easeOut"}
-                        ]'
-                        data-textAlign="['left','left','left','left']"
-                        data-paddingtop="[0,0,0,0]"
-                        data-paddingright="[0,0,0,0]"
-                        data-paddingbottom="[0,0,0,0]"
-                        data-paddingleft="[0,0,0,0]"
-                        
-                        style="z-index: 12;background-color:rgba(0, 0, 0, 0.5);border-color:rgba(0, 0, 0, 0);border-width:0px;"> 
-                        </div>
-                        
-                        <div class="tp-caption   tp-resizeme" 
-                        id="slide-300-layer-2" 
-                        data-x="['left','left','left','left']" data-hoffset="['30','30','30','100']" 
-                        data-y="['top','top','top','top']" data-voffset="['200','200','200','200']"  
-                        data-fontsize="['60','60','60','50']"
-                        data-lineheight="['70','70','70','60']"
-                        data-width="['1200','1200','1200','1200']"
-                        data-height="['none','none','none','none']"
-                        data-whitespace="['normal','normal','normal','normal']"
-                        
-                        data-type="text" 
-                        data-responsive_offset="on" 
-                        data-frames='[
-                        {"from":"y:100px(R);opacity:0;","speed":2000,"to":"o:1;","delay":500,"ease":"Power4.easeOut"},
-                        {"delay":"wait","speed":1000,"to":"y:-50px;opacity:0;","ease":"Power2.easeInOut"}
-                        ]'
-                        data-textAlign="['left','left','left','left']"
-                        data-paddingtop="[0,0,0,0]"
-                        data-paddingright="[0,0,0,0]"
-                        data-paddingbottom="[0,0,0,0]"
-                        data-paddingleft="[0,0,0,0]"
-                        
-                        style="z-index: 13; 
-                        white-space: normal; 
-                        font-weight: 700; 
-                        color: rgba(255, 255, 255, 1.00);
-                        border-width:0px;">
-                        <span class="text-uppercase" style="font-family:'Roboto' ;"><span class="text-primary">We Build </span> Your Dream College</span>
-                        </div>
-                        
-                        <div class="tp-caption  tp-resizeme" 
-                        id="slide-300-layer-3" 
-                        data-x="['left','left','left','left']" data-hoffset="['30','30','30','100']" 
-                        data-y="['top','top','top','top']" data-voffset="['300','300','300','300']"  
-                        data-fontsize="['18','18','18','30']"
-                        data-lineheight="['30','30','30','40']"
-                        data-width="['650','650','650','650']"
-                        data-height="['none','none','none','none']"
-                        data-whitespace="['normal','normal','normal','normal']"
-                        
-                        data-type="text" 
-                        data-responsive_offset="on"
-                        data-frames='[
-                        {"from":"y:100px(R);opacity:0;","speed":2000,"to":"o:1;","delay":1000,"ease":"Power4.easeOut"},
-                        {"delay":"wait","speed":1000,"to":"y:-50px;opacity:0;","ease":"Power2.easeInOut"}
-                        ]'
-                        data-textAlign="['left','left','left','left']"
-                        data-paddingtop="[0,0,0,0]"
-                        data-paddingright="[0,0,0,0]"
-                        data-paddingbottom="[0,0,0,0]"
-                        data-paddingleft="[0,0,0,0]"
-                        
-                        style="z-index: 13; 
-                        font-weight: 500; 
-                        color: rgba(255, 255, 255, 0.85);
-                        border-width:0px;">
-                        <span style="font-family:'Roboto';">We are the best construction company in south india.We have 24 years of experience and we buid your dream buildings.</span>
-                        </div>
-                        
-                        <div class="tp-caption tp-resizeme" 	
-                        id="slide-300-layer-4"						
-                        data-x="['left','left','left','left']" data-hoffset="['30','30','30','100']" 
-                        data-y="['top','top','top','top']" data-voffset="['430','430','450','500']"  
-                        data-lineheight="['none','none','none','none']"
-                        data-width="['300','300','300','300']"
-                        data-height="['none','none','none','none']"
-                        data-whitespace="['normal','normal','normal','normal']"
-                        
-                        data-type="text" 
-                        data-responsive_offset="on"
-                        data-frames='[ 
-                        {"from":"y:100px(R);opacity:0;","speed":2000,"to":"o:1;","delay":1500,"ease":"Power4.easeOut"},
-                        {"delay":"wait","speed":1000,"to":"y:-50px;opacity:0;","ease":"Power2.easeInOut"}
-                        ]'
-                        data-textAlign="['left','left','left','left']"
-                        data-paddingtop="[0,0,0,0]"
-                        data-paddingright="[0,0,0,0]"
-                        data-paddingbottom="[0,0,0,0]"
-                        data-paddingleft="[0,0,0,0]"
-                        
-                        style="z-index:13; text-transform:uppercase; font-weight:700;">
-                        <a href="gallery.php" class="site-button button-lg skew-icon-btn m-r15">Read more <i class="fa fa-angle-double-right"></i></a>
-                        </div>
-                        
-                        <div class="tp-caption tp-resizeme" 	
-                        id="slide-300-layer-5"						
-                        data-x="['left','left','left','left']" data-hoffset="['230','230','230','230']" 
-                        data-y="['top','top','top','top']" data-voffset="['490','490','490','600']"  
-                        data-fontsize="['none','none','none','none']"
-                        data-lineheight="['none','none','none','none']"
-                        data-width="['300','300','300','300']"
-                        data-height="['none','none','none','none']"
-                        data-whitespace="['normal','normal','normal','normal']"
-                        
-                        data-type="text" 
-                        data-responsive_offset="on"
-                        data-frames='[ 
-                        {"from":"y:100px(R);opacity:0;","speed":2000,"to":"o:1;","delay":2000,"ease":"Power4.easeOut"},
-                        {"delay":"wait","speed":1000,"to":"y:-50px;opacity:0;","ease":"Power2.easeInOut"}
-                        ]'
-                        data-textAlign="['left','left','left','left']"
-                        data-paddingtop="[0,0,0,0]"
-                        data-paddingright="[0,0,0,0]"
-                        data-paddingbottom="[0,0,0,0]"
-                        data-paddingleft="[0,0,0,0]"
-                        
-                        style="z-index: 13; text-transform:uppercase; font-weight:700;">
-                        
-                        </div>     
-                        
-                        </li> -->
+@endforeach
                   </ul>
                   <div class="tp-bannertimer tp-bottom" style="visibility: hidden !important;"></div>
                </div>
             </div>
-            <!-- END REVOLUTION SLIDER -->
          </div>
       </div>
    </div>
@@ -850,6 +572,7 @@
 </div>
 </div>
 </div>  
+
 <div class="section-full p-t80" style="background-image:url(images/background/bg-4.png); background-repeat:repeat;background-color:#273447; ">
    <div class="overlay-main"></div>
    <div class="container">
@@ -862,8 +585,10 @@
                <div class="filter-wrap p-tb15 right">
                   <ul class="masonry-filter outline-style button-skew text-uppercase customize">
                      <li class="active"><a data-filter="*" href="#"><span> All</span></a></li>
-                     <li><a data-filter=".1" href="#"><span> Completed Projects</span></a></li>
-                     <li><a data-filter=".2" href="#"><span> Progress Projects</span></a></li>
+					 
+@foreach ($projectstatus as $pro)
+                     <li><a data-filter=".{{ $pro->id }}"><span> {{ $pro->project_status_name }}</span></a></li>
+@endforeach
                   </ul>
                </div>
             </div>
@@ -876,18 +601,19 @@
          <div class="row">
             <div class="portfolio-wrap mfp-gallery no-col-gap">
                <!-- COLUMNS 1 -->
-               <div class="masonry-item 1 col-lg-4 col-md-4 col-sm-6 col-xs-6">
+@foreach ($projectimg as $pro)
+               <div class="masonry-item {{ $pro->project_status_id }} col-lg-4 col-md-4 col-sm-6 col-xs-6">
                   <div class="wt-gallery-bx p-a15">
                      <div class="wt-thum-bx wt-img-effect img-reflection p-a15">
                         <a href="javascript:void(0);">
-                        <img src="admin/photo/project/3.png" alt="">
+                        <img src="{{ URL::to('/') }}/upload/projectsave/{{ $pro->photo }}" alt="{{ $pro->project_name }}" alt="">
                         </a>
                         <div class="overlay-bx">
                            <div class="overlay-icon">
                               <a href="javascript:void(0);">
                               <i class="fa fa-link wt-icon-box-xs"></i>
                               </a>
-                              <a href="admin/photo/project/3.png" class="mfp-link">
+                              <a href="{{ URL::to('/') }}/upload/projectsave/{{ $pro->photo }}" alt="{{ $pro->project_name }}" class="mfp-link">
                               <i class="fa fa-picture-o wt-icon-box-xs"></i>
                               </a>
                            </div>
@@ -895,139 +621,7 @@
                      </div>
                   </div>
                </div>
-               <div class="masonry-item 1 col-lg-4 col-md-4 col-sm-6 col-xs-6">
-                  <div class="wt-gallery-bx p-a15">
-                     <div class="wt-thum-bx wt-img-effect img-reflection p-a15">
-                        <a href="javascript:void(0);">
-                        <img src="admin/photo/project/4.png" alt="">
-                        </a>
-                        <div class="overlay-bx">
-                           <div class="overlay-icon">
-                              <a href="javascript:void(0);">
-                              <i class="fa fa-link wt-icon-box-xs"></i>
-                              </a>
-                              <a href="admin/photo/project/4.png" class="mfp-link">
-                              <i class="fa fa-picture-o wt-icon-box-xs"></i>
-                              </a>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-               <div class="masonry-item 1 col-lg-4 col-md-4 col-sm-6 col-xs-6">
-                  <div class="wt-gallery-bx p-a15">
-                     <div class="wt-thum-bx wt-img-effect img-reflection p-a15">
-                        <a href="javascript:void(0);">
-                        <img src="admin/photo/project/5.jpg" alt="">
-                        </a>
-                        <div class="overlay-bx">
-                           <div class="overlay-icon">
-                              <a href="javascript:void(0);">
-                              <i class="fa fa-link wt-icon-box-xs"></i>
-                              </a>
-                              <a href="admin/photo/project/5.jpg" class="mfp-link">
-                              <i class="fa fa-picture-o wt-icon-box-xs"></i>
-                              </a>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-               <div class="masonry-item 1 col-lg-4 col-md-4 col-sm-6 col-xs-6">
-                  <div class="wt-gallery-bx p-a15">
-                     <div class="wt-thum-bx wt-img-effect img-reflection p-a15">
-                        <a href="javascript:void(0);">
-                        <img src="admin/photo/project/6.jpg" alt="">
-                        </a>
-                        <div class="overlay-bx">
-                           <div class="overlay-icon">
-                              <a href="javascript:void(0);">
-                              <i class="fa fa-link wt-icon-box-xs"></i>
-                              </a>
-                              <a href="admin/photo/project/6.jpg" class="mfp-link">
-                              <i class="fa fa-picture-o wt-icon-box-xs"></i>
-                              </a>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-               <div class="masonry-item 1 col-lg-4 col-md-4 col-sm-6 col-xs-6">
-                  <div class="wt-gallery-bx p-a15">
-                     <div class="wt-thum-bx wt-img-effect img-reflection p-a15">
-                        <a href="javascript:void(0);">
-                        <img src="admin/photo/project/" alt="">
-                        </a>
-                        <div class="overlay-bx">
-                           <div class="overlay-icon">
-                              <a href="javascript:void(0);">
-                              <i class="fa fa-link wt-icon-box-xs"></i>
-                              </a>
-                              <a href="admin/photo/project/" class="mfp-link">
-                              <i class="fa fa-picture-o wt-icon-box-xs"></i>
-                              </a>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-               <div class="masonry-item 1 col-lg-4 col-md-4 col-sm-6 col-xs-6">
-                  <div class="wt-gallery-bx p-a15">
-                     <div class="wt-thum-bx wt-img-effect img-reflection p-a15">
-                        <a href="javascript:void(0);">
-                        <img src="admin/photo/project/" alt="">
-                        </a>
-                        <div class="overlay-bx">
-                           <div class="overlay-icon">
-                              <a href="javascript:void(0);">
-                              <i class="fa fa-link wt-icon-box-xs"></i>
-                              </a>
-                              <a href="admin/photo/project/" class="mfp-link">
-                              <i class="fa fa-picture-o wt-icon-box-xs"></i>
-                              </a>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-               <div class="masonry-item 1 col-lg-4 col-md-4 col-sm-6 col-xs-6">
-                  <div class="wt-gallery-bx p-a15">
-                     <div class="wt-thum-bx wt-img-effect img-reflection p-a15">
-                        <a href="javascript:void(0);">
-                        <img src="admin/photo/project/" alt="">
-                        </a>
-                        <div class="overlay-bx">
-                           <div class="overlay-icon">
-                              <a href="javascript:void(0);">
-                              <i class="fa fa-link wt-icon-box-xs"></i>
-                              </a>
-                              <a href="admin/photo/project/" class="mfp-link">
-                              <i class="fa fa-picture-o wt-icon-box-xs"></i>
-                              </a>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-               <div class="masonry-item 1 col-lg-4 col-md-4 col-sm-6 col-xs-6">
-                  <div class="wt-gallery-bx p-a15">
-                     <div class="wt-thum-bx wt-img-effect img-reflection p-a15">
-                        <a href="javascript:void(0);">
-                        <img src="admin/photo/project/" alt="">
-                        </a>
-                        <div class="overlay-bx">
-                           <div class="overlay-icon">
-                              <a href="javascript:void(0);">
-                              <i class="fa fa-link wt-icon-box-xs"></i>
-                              </a>
-                              <a href="admin/photo/project/" class="mfp-link">
-                              <i class="fa fa-picture-o wt-icon-box-xs"></i>
-                              </a>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
+@endforeach
             </div>
          </div>
          <!-- GALLERY CONTENT END -->
