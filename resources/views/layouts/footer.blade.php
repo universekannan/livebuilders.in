@@ -20,7 +20,7 @@
             <div class="widget widget_about">
                <h4 class="widget-title">About Company</h4>
                <div class="logo-footer clearfix p-b15">
-                  <a href="contact-us.php"><img src="images/logo.png" width="230" height="67" alt=""/></a>
+                  <a href="contact-us.php"><img src="assets/images/logo.png" width="230" height="67" alt=""/></a>
                </div>
                <p>Live Builders is one of the best real estate developers in chennai,Tamilnadu. We specialize in building premier and Baget residential projects . We bring you the finest homes that are unsurpassed in quality and elegance.
                </p>

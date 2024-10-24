@@ -124,13 +124,22 @@
                                                     <input name="phone" type="text" class="form-control" required placeholder="phone">
                                                 </div>
                                             </div>
-        
                                         </div>
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <div for="subject" class="input-group">
+                                                    <span class="input-group-addon"><i class="fa fa-book"></i></span>
+                                                    <input name="subject" type="text" class="form-control" required placeholder="Subject">
+                                                </div>
+                                            </div>
+                                        </div>
+        
+                                         
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <div for="message" class="input-group">
                                                     <span  class="input-group-addon v-align-m"><i class="fa fa-pencil"></i></span>
-                                                    <textarea name="subject" rows="4" class="form-control " required placeholder="Message"></textarea>
+                                                    <textarea name="message" rows="4" class="form-control " required placeholder="Message"></textarea>
                                                 </div>
                                             </div>
                                         </div>

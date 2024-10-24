@@ -101,18 +101,23 @@ class MainController extends BaseController
 
      public function updatedetails (Request $request)
       {
+        $name = $request->full_name;
+        $full_name = str_replace( "'", '', $name );
+        $full_name = str_replace( [ '\\', '/' ], ' ', $full_name );
+        $output = preg_replace( '!\s+!', ' ', $full_name );
 
         $updatedetails  = DB::table('contact_details')->where('id', $request->row_id)->Update([
-            'full_name'     => $request->full_name,
+            'full_name'      => $request->full_name,
             'subject'        => $request->subject,
+            'message'        =>   $request->message,
             'email_address'  => $request->email_address,
             'phone'          => $request->phone,
-            'status'        => $request->status,
+            'status'         => $request->status,
         ]);
+        echo $request;
 
-        return redirect()->back()->with( 'success', 'Update Successfully ... !' );
+        return redirect()->back()->with( 'success', 'Update Successfully ... !' , $request);
     }
-   
     public function gallery(){
            $projectstatus = DB::table( 'project_status' )->orderBy( 'id', 'Asc' )->get();
            $projectimg = DB::table( 'project' )->orderBy( 'id', 'Asc' )->get();
