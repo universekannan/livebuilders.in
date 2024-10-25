@@ -61,14 +61,15 @@ CREATE TABLE `category` (
 DROP TABLE `category`;
 
 CREATE TABLE `contact_details` (
-  `id` int(11) NOT NULL,
+  `id` int NOT NULL AUTO_INCREMENT,
   `full_name` varchar(50) DEFAULT '0',
   `subject` varchar(50) DEFAULT '0',
   `message` varchar(200) DEFAULT NULL,
   `email_address` varchar(50) DEFAULT '0',
   `phone` varchar(50) DEFAULT '0',
   `status` varchar(20) DEFAULT NULL,
-  `enquiry_date` datetime(6) DEFAULT NULL
+  `enquiry_date` datetime(6) DEFAULT NULL,
+   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 

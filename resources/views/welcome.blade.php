@@ -175,7 +175,7 @@
          <div class="row">
             <div class="col-md-5 col-sm-5">
                <div class="about-com-pic">
-                  <img src="images/about.jpg" alt="" class="img-responsive"/>
+                  <img src="assets/images/about.jpg" alt="" class="img-responsive"/>
                </div>
             </div>
             <div class="col-md-7 col-sm-7">
@@ -272,7 +272,7 @@
                <span class="separator-right site-bg-primary"></span>
             </div>
          </div>
-         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+         <p>Live Builders is founded to give you trust, value and services alike in each of their services, and this certainly needs special mentioning about their Successful era. </p>
       </div>
       <!-- TITLE END-->
       <div class="section-content m-b20">
@@ -285,7 +285,7 @@
                   </div>
                   <div class="icon-content">
                      <h5 class="wt-tilte text-uppercase">BEST QUALITY</h5>
-                     <p>Lorem Ipsum is simply dummy text of the printing and typesg indtrysum has been the Ipsum dummy of the printing indus Lorem Ipsum is simply dummy text of the printing and typesg indtrysum has been the Ipsum dummy of the printing indus Lorem Ipsum is simply dummy text of the printing and typesg indtrysum has been the Ipsum dummy of the printing indus .</p>
+                     <p> The live builders has always been in the look out for integrating quality, modernity as well as excellence in each one of their property. The aim of changing the way people approach quality in construction. </p>
                   </div>
                </div>
             </div>
@@ -297,7 +297,7 @@
                   </div>
                   <div class="icon-content ">
                      <h5 class="wt-tilte text-uppercase">INTEGRITY</h5>
-                     <p>Lorem Ipsum is simply dummy text of the printing and typesg indtrysum has been the Ipsum dummy of the printing indus .</p>
+                     <p>Their sole aim is to exceed the expectations placed by the customers in all ways possible. The brand keeps its communication with customers utmost transparent and makes trendsetting innovations like no other.</p>
                   </div>
                </div>
             </div>
@@ -309,7 +309,7 @@
                   </div>
                   <div class="icon-content">
                      <h5 class="wt-tilte text-uppercase">STRATEGY</h5>
-                     <p>Lorem Ipsum is simply dummy text of the printing and typesg indtrysum has been the Ipsum dummy of the printing indus .</p>
+                     <p>The brand has absorbed the trust of their customers with riveting marketing strategies online and offline to which their construction standard proves to be on par.</p>
                   </div>
                </div>
             </div>
@@ -323,7 +323,7 @@
                   </div>
                   <div class="icon-content">
                      <h5 class="wt-tilte text-uppercase">SAFETY</h5>
-                     <p>Lorem Ipsum is simply dummy text of the printing and typesg indtrysum has been the Ipsum dummy of the printing indus .</p>
+                     <p> When a construction comes from this house, there is no denying that it is certainly of excellence quality with complete vastu compliance and dedication to futuristic lifestyle.</p>
                   </div>
                </div>
             </div>
@@ -335,7 +335,7 @@
                   </div>
                   <div class="icon-content">
                      <h5 class="wt-tilte text-uppercase">COMMUNITY</h5>
-                     <p>Lorem Ipsum is simply dummy text of the printing and typesg indtrysum has been the Ipsum dummy of the printing indus .</p>
+                     <p>Among all the builders out there in the city, Live builders is particularly  developing the buildings into integrated community each of which has become a landmark in the city.</p>
                   </div>
                </div>
             </div>
@@ -347,7 +347,7 @@
                   </div>
                   <div class="icon-content">
                      <h5 class="wt-tilte text-uppercase">SUSTAINABILITY</h5>
-                     <p>Lorem Ipsum is simply dummy text of the printing and typesg indtrysum has been the Ipsum dummy of the printing indus .</p>
+                     <p> Livebuilders has now successfully constructed over serveral landmark constructions altogether.And in the present-day scenario, Livebuilders is known exclusively to make innovations to such an extent that it is synonymous to the same!</p>
                   </div>
                </div>
             </div>
@@ -356,44 +356,7 @@
    </div>
 </div>
 <!-- WHY CHOOSE US SECTION END  -->            
-<div class="section-full bg-white p-t80 p-b50">
-   <div class="container">
-      <!-- Event post Carousel with no margin -->
-      <div class="section-head">
-         <h2 class="text-uppercase">Completed Project </h2>
-         <div class="wt-separator-outer">
-            <div class="wt-separator style-square">
-               <span class="separator-left bg-primary"></span>
-               <span class="separator-right bg-primary"></span>
-            </div>
-         </div>
-      </div>
-      <div class="section-content">
-         <div class="owl-carousel blog-carousel  owl-btn-vertical-center">
-@foreach ($Upcomingprojects as $pro)
-            <div class="item">
-               <div class="ow-event-post date-style-2">
-                  <div class="ow-event-media wt-img-effect img-reflection">
-                     <img src="{{ URL::to('/') }}/upload/projectsave/{{ $pro->photo }}" alt="{{ $pro->project_name }}">
-                  </div>
-                  <div class="ow-event-info p-a30 bg-gray">
-                     <div class="ow-event-title">
-                        <h4 class="event-title">{{ $pro->project_name }}<a href="{{ url('project') }}/{{ $pro->id }}" title="{{ $pro->project_name }}"></a></h4>
-                     </div>
-                     <div class="ow-event-text">
-                        <p>{{ $pro->project_name }}, {{ $pro->project_name }}{{ $pro->project_owner }},'{{ $pro->project_address }}</p>
-                     </div>
-                     <div class="ow-event-readmore "> 
-                        <a href="{{ url('project') }}/{{ $pro->id }}" title="{{ $pro->project_name }}" rel="bookmark" class=" site-button"> READ MORE</a> 
-                     </div>
-                  </div>
-               </div>
-            </div>
-@endforeach
-         </div>
-      </div>
-   </div>
-</div>
+
 <div class="section-full bg-white p-t80 p-b50">
    <div class="container">
       <!-- Event post Carousel with no margin -->
@@ -498,7 +461,7 @@
                         </div>
                         <div class="icon-content">
                            <h5 class="wt-tilte text-uppercase">Years of Experience</h5>
-                           <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod [...]</p>
+                           <p>Being in the industry for over 17+ years, Live Builders  is among the leading Builders in the city.  And being succesfull in their era.</p>
                         </div>
                      </div>
                   </div>
@@ -510,7 +473,7 @@
                         </div>
                         <div class="icon-content">
                            <h5 class="wt-tilte text-uppercase">Fully Insured</h5>
-                           <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod [...]</p>
+                           <p>The cost of damage done to a structure while under construction including fire, vandalism, weather, and theft can be covered </p>
                         </div>
                      </div>
                   </div>
@@ -522,7 +485,7 @@
                         </div>
                         <div class="icon-content">
                            <h5 class="wt-tilte text-uppercase">Free Consultation</h5>
-                           <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod [...]</p>
+                           <p>The purpose of a free consultation is to provide a potential client with information regarding the services that we provide.  </p>
                         </div>
                      </div>
                   </div>
@@ -534,7 +497,7 @@
                         </div>
                         <div class="icon-content">
                            <h5 class="wt-tilte text-uppercase">Affordable Pricing</h5>
-                           <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod [...]</p>
+                           <p> There are varying definitions of “Affordable Pricing”, but it can generally be considered as a price lower than that charged for high income countries.</p>
                         </div>
                      </div>
                   </div>
@@ -546,7 +509,7 @@
                         </div>
                         <div class="icon-content">
                            <h5 class="wt-tilte text-uppercase">Cost Control Experts</h5>
-                           <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod [...]</p>
+                           <p>Cost control refers to the process of monitoring and managing expenses within an organization to maintain financial stability</p>
                         </div>
                      </div>
                   </div>
@@ -558,7 +521,7 @@
                         </div>
                         <div class="icon-content">
                            <h5 class="wt-tilte text-uppercase">Satisfied Customers</h5>
-                           <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod [...]</p>
+                           <p>Customer satisfaction information, including surveys and ratings, can help a company determine how to best improve or change the services.</p>
                         </div>
                      </div>
                   </div>

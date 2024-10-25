@@ -12,7 +12,8 @@
                         <p>Dashboard</p>
                     </a>
                 </li>
-<li
+
+                  <li
                         class="nav-item has-treeview {{ request()->segment(2) == 'addproject' || request()->segment(3) == '1' || request()->segment(3) == '2' || request()->segment(3) == '3' ? 'menu-open' : '' }}">
                         <a href="#"
                             class="nav-link {{ request()->segment(2) == 'addproject' || request()->segment(3) == '1' || request()->segment(3) == '2' || request()->segment(3) == '3' ? 'active' : '' }}">
@@ -29,7 +30,7 @@
                                     <p>Add Project</p>
                                 </a>
                             </li>
-							  <li class="nav-item">
+                              <li class="nav-item">
                             <a href="{{ url('admin/projects/1') }}"
                                 class="nav-link {{ request()->segment(3) == '1' ? 'active' : '' }}">
                                 <i class="fa fa-ban nav-icon"></i>
@@ -52,31 +53,31 @@
                         </li>
                         </ul>
                     </li>
-					
+                    
                  <li class="nav-item has-treeview {{ request()->segment(1) == 'contact' ? 'menu-open' : '' }}">
                     <a href="{{ url('admin/contact') }}" class="nav-link {{ Request::is('admin/contact') ? 'active' : '' }}">
                         <i class="nav-icon fa fas fa-address-book fa-lg"></i>
                         <p>Enquiry</p>
                     </a>
                 </li>
-				
+                
                 <li class="nav-item has-treeview {{ request()->segment(1) == 'banners' ? 'menu-open' : '' }}">
                     <a href="{{ url('admin/banners') }}" class="nav-link {{ Request::is('admin/banners') ? 'active' : '' }}">
-                        <i class="far fa-dot-circle nav-icon"></i>
+                        <i  class="nav-icon fas fa-image"></i>
                         <p>Banners</p>
                     </a>
                 </li>
 
                 <li class="nav-item has-treeview {{ request()->segment(1) == 'backup' ? 'menu-open' : '' }}">
                    <a href="{{ route('backup') }}" class="nav-link {{ Request::is('admin/backup') ? 'active' : '' }}">
-                        <i class="far fa-dot-circle nav-icon"></i>
+                        <i class="nav-icon fas fa-archive" ></i>
                         <p>Backup</p>
                     </a>
                 </li>
 						
 						
                 <li class="nav-item has-treeview {{ request()->segment(1) == 'profile' || request()->is('changepassword') ? 'menu-open' : '' }}">
-                    <a href="" class="nav-link">
+                    <a href="" class="nav-link {{ request()->segment(1) == 'profile' || request()->is('changepassword') ? 'active' : '' }}">
                         <i class="nav-icon fas fa-user"></i>
                         <p>
                             {{ Auth::user()->full_name }}

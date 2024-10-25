@@ -54,14 +54,15 @@ INSERT INTO `banners` (`id`, `banner_name`, `status`, `photo`, `banner_title`, `
 --
 
 CREATE TABLE `contact_details` (
-  `id` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `full_name` varchar(50) DEFAULT '0',
   `subject` varchar(50) DEFAULT '0',
   `message` varchar(200) DEFAULT NULL,
   `email_address` varchar(50) DEFAULT '0',
   `phone` varchar(50) DEFAULT '0',
   `status` varchar(20) DEFAULT NULL,
-  `enquiry_date` datetime(6) DEFAULT NULL
+  `enquiry_date` datetime(6) DEFAULT NULL,
+   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -83,7 +84,7 @@ INSERT INTO `contact_details` (`id`, `full_name`, `subject`, `message`, `email_a
 --
 
 CREATE TABLE `project` (
-  `id` int(11) NOT NULL,
+  `id` int(11) NOT NULL ,
   `project_status_id` int(20) DEFAULT NULL,
   `project_name` varchar(50) DEFAULT NULL,
   `project_owner` varchar(50) DEFAULT NULL,

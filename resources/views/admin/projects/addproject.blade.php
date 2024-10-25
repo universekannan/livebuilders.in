@@ -79,7 +79,7 @@
                                             <input type="file" required="required" class="form-control" name="photo" maxlength="100" type="photo">
                                         </div>
                                     </div>
-                                </div>
+                               
 
                                 <div class="form-group row">
                                   <label for="project_address" class="col-sm-2 col-form-label"><span
@@ -90,6 +90,7 @@
                                         </textarea>
                                     </div>
                                 </div>
+                            </div>
 
                                 <div class="col-md-12 text-center">
                                     <a class="btn btn-primary" href="{{ url('admin/project') }}">Back</a>
