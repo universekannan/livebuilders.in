@@ -134,7 +134,7 @@
                   <div class="col-md-6 p-tb10">
                      <div class="wt-icon-box-wraper left ">
                         <div class="icon-md text-primary">
-                           <a href="contact-us.php" class="icon-cell">
+                           <a href="contactus" class="icon-cell">
                            <img src="images/icons/besty-quality.png" alt="">
                            </a>
                         </div>
@@ -147,7 +147,7 @@
                   <div class="col-md-6 p-tb10">
                      <div class="wt-icon-box-wraper left">
                         <div class="icon-md text-primary">
-                           <a href="contact-us.php" class="icon-cell">
+                           <a href="contactus" class="icon-cell">
                            <img src="images/icons/24-call-icon.png" alt="">
                            </a>
                         </div>
@@ -162,7 +162,7 @@
             </div>
             <div class="col-md-3 p-t50 p-b50 col-md-offset-1">
                <div class="">
-                  <a href="contact-us.php" class="site-button skew-icon-btn m-r15 text-uppercase"  style="font-weight:600;">Contact us <i class="fa fa-angle-double-right"></i></a>
+                  <a href="contactus" class="site-button skew-icon-btn m-r15 text-uppercase"  style="font-weight:600;">Contact us <i class="fa fa-angle-double-right"></i></a>
                </div>
             </div>
          </div>
